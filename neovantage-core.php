@@ -7,14 +7,14 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://pixelspress.com
+ * @link              https://github.com/mohsin-rafique/neovantage-core
  * @since             1.0.0
  * @package           Neovantage_Core
  *
  * @wordpress-plugin
  * Plugin Name:       NEOVANTAGE Core
- * Plugin URI:        https://pixelspress.com
- * Description:       NEOVANTAGE CORE Plugin for NEOVANTAGE Theme.
+ * Plugin URI:        https://github.com/mohsin-rafique/neovantage-core
+ * Description:       The official companion plugin for the NEOVANTAGE WordPress theme. Adds post view counts, enhanced widgets, one-click demo import, and customizer export/import.
  * Version:           2.0.6
  * Author:            PixelsPress, Mohsin Rafique
  * Author URI:        https://pixelspress.com
