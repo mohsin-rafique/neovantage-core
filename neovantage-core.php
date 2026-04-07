@@ -31,9 +31,9 @@ if ( ! defined( 'WPINC' ) ) {
 
 define( 'NC_NAME', 'NEOVANTAGE' );
 if ( ! defined( 'N_VERSION' ) ) {
-	define( 'N_VERSION', '2.0.7' );
+	define( 'N_VERSION', '2.0.8' );
 }
-define( 'NC_VERSION', '2.0.7' );
+define( 'NC_VERSION', '2.0.8' );
 define( 'NC_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'NC_DIR_URL', plugin_dir_url( __FILE__ ) );
 
@@ -83,4 +83,4 @@ function run_neovantage_core() {
 	$plugin = new Neovantage_Core();
 	$plugin->run();
 }
-run_neovantage_core();
+add_action( 'plugins_loaded', 'run_neovantage_core' );
