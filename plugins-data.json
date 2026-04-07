@@ -2,8 +2,8 @@
     {
         "name": "NEOVANTAGE Core",
         "slug": "neovantage-core",
-        "version": "2.0.6",
-        "latest_version": "2.0.6",
+        "version": "2.0.7",
+        "latest_version": "2.0.7",
         "has_package": true,
         "premium": true,
         "required": false,

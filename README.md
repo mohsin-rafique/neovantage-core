@@ -120,6 +120,17 @@ Post views are tracked automatically on every single post page load. The count i
 
 ## 📝 Changelog
 
+### 2.0.7 — 07 April, 2026
+- **Fix:** Corrected `GITHUB_OWNER` constant from `PixelsPress` to `mohsin-rafique` — wrong owner caused the GitHub Releases API to return 404, silently blocking all update notifications in Dashboard → Updates, Plugins list, and admin bar.
+- **Fix:** Updated plugin `url` and `homepage` in the updater from `pixelspress.com` to the correct GitHub repo (`github.com/mohsin-rafique/neovantage-core`).
+- **Fix:** Updated doc block API URL reference from `PixelsPress/neovantage-core` to `mohsin-rafique/neovantage-core`.
+- **Distribution:** Plugin source code and releases moved to GitHub (`github.com/mohsin-rafique/neovantage-core`). Download URL updated from `downloads.pixelspress.com` to GitHub Releases.
+- **Distribution:** Plugin version metadata JSON (`plugins-data.json`) moved from `downloads.pixelspress.com` to GitHub raw content.
+- **Improvement:** Plugin URI in plugin header updated to point to GitHub repo instead of `pixelspress.com`.
+- **Improvement:** Plugin description updated to accurately reflect all features.
+- **Improvement:** `plugins-data.json` added to repo root — single source of truth for version metadata used by the NEOVANTAGE theme's TGM plugin list.
+- **Bump:** Version raised to 2.0.7 in plugin header, `N_VERSION`, and `NC_VERSION` constants.
+
 ### 2.0.6 — 05 April, 2026
 - **Compatibility:** Tested up to WordPress 6.9
 - **Compatibility:** Minimum PHP raised to 8.0; confirmed clean on PHP 8.4

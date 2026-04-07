@@ -11,7 +11,7 @@
  * Architecture
  * ------------
  * Version data is fetched from the GitHub Releases API:
- *   https://api.github.com/repos/PixelsPress/neovantage-core/releases/latest
+ *   https://api.github.com/repos/mohsin-rafique/neovantage-core/releases/latest
  *
  * The response is cached in a site transient for 12 hours
  * (`neovantage_core_update_info`). WordPress itself checks for plugin updates
@@ -62,7 +62,7 @@ class Neovantage_Core_Updater {
 	 * @since 2.0.6
 	 * @var   string
 	 */
-	const GITHUB_OWNER = 'PixelsPress';
+	const GITHUB_OWNER = 'mohsin-rafique';
 
 	/**
 	 * GitHub repository name.
@@ -268,7 +268,7 @@ class Neovantage_Core_Updater {
 			'slug'         => self::GITHUB_REPO,
 			'plugin'       => self::PLUGIN_BASENAME,
 			'new_version'  => $release['version'],
-			'url'          => 'https://pixelspress.com/free-wordpress-theme/',
+			'url'          => 'https://github.com/mohsin-rafique/neovantage-core',
 			'package'      => $release['download_url'],
 			'icons'        => array(),
 			'banners'      => array(),
@@ -314,7 +314,7 @@ class Neovantage_Core_Updater {
 			'slug'          => self::GITHUB_REPO,
 			'version'       => $version,
 			'author'        => '<a href="https://pixelspress.com">PixelsPress</a>',
-			'homepage'      => 'https://pixelspress.com/free-wordpress-theme/',
+			'homepage'      => 'https://github.com/mohsin-rafique/neovantage-core',
 			'requires'      => '5.3',
 			'requires_php'  => '8.0',
 			'tested'        => '6.9',
