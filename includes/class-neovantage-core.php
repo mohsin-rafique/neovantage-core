@@ -156,7 +156,7 @@ class Neovantage_Core {
 
 		$plugin_i18n = new Neovantage_Core_i18n();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
+		$this->loader->add_action( 'init', $plugin_i18n, 'load_plugin_textdomain' );
 	}
 
 	/**

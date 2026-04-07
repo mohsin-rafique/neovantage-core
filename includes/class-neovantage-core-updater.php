@@ -320,8 +320,8 @@ class Neovantage_Core_Updater {
 			'tested'        => '6.9',
 			'download_link' => $package,
 			'sections'      => array(
-				'description' => esc_html__( 'Companion plugin for the NEOVANTAGE WordPress theme. Adds post view counts, custom widgets, and author contact fields.', 'neovantage-core' ),
-				'changelog'   => esc_html__( 'See the full changelog at pixelspress.com/free-wordpress-theme/', 'neovantage-core' ),
+				'description' => esc_html( 'Companion plugin for the NEOVANTAGE WordPress theme. Adds post view counts, custom widgets, and author contact fields.' ),
+				'changelog'   => esc_html( 'See the full changelog at pixelspress.com/free-wordpress-theme/' ),
 			),
 		);
 	}

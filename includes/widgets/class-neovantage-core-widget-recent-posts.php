@@ -264,7 +264,6 @@ class Neovantage_Core_Widget_Recent_Posts extends WP_Widget {
 		return $instance;
 	}
 }
-new Neovantage_Core_Widget_Recent_Posts();
 
 // end class.
 add_action(
