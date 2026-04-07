@@ -34,32 +34,38 @@ NEOVANTAGE Core extends the [NEOVANTAGE WordPress theme](https://wordpress.org/t
 ## ✨ Features
 
 ### 📊 Post View Count
+
 Automatically tracks and displays how many times each post has been viewed. Counts are stored directly in your WordPress database as post meta — no external service or API key required. Use them to surface your most popular content anywhere in the theme.
 
 ### 🗂️ Enhanced Recent Posts Widget
+
 A drop-in replacement for WordPress's built-in Recent Posts widget with post thumbnails, post dates, and clean theme-matched styling. Add it to any sidebar or footer column from **Appearance → Widgets**.
 
 ### 👤 Author Profile Contact Fields
+
 Adds Email and Dribbble profile fields to WordPress user profiles. These fields are displayed automatically on author archive pages, giving your writers a professional public profile without a separate plugin.
 
 ### 🔧 System Status Panel
+
 An at-a-glance admin panel showing your PHP version, WordPress version, server software, active theme version, and database information — everything needed for troubleshooting or sharing with support.
 
 ### 📥 One-Click Demo Importer
+
 Import the NEOVANTAGE demo content — posts, pages, menus, widgets, and Customizer settings — in a single click. Go from a blank install to a fully configured demo site in under a minute.
 
 ### 💾 Customizer Export / Import
+
 Export your entire WordPress Customizer configuration to a `.json` file and import it on another site. Perfect for moving design settings between staging and production, or backing up customization before a major change.
 
 ---
 
 ## 📋 Requirements
 
-| Requirement | Minimum | Recommended |
-|---|---|---|
-| WordPress | 5.3 | 6.9 |
-| PHP | 8.0 | 8.4 |
-| Theme | NEOVANTAGE (any version) | NEOVANTAGE 2.0.6+ |
+| Requirement | Minimum                  | Recommended       |
+| ----------- | ------------------------ | ----------------- |
+| WordPress   | 5.3                      | 6.9               |
+| PHP         | 8.0                      | 8.4               |
+| Theme       | NEOVANTAGE (any version) | NEOVANTAGE 2.0.6+ |
 
 ---
 
@@ -102,9 +108,11 @@ No manual downloads needed — update directly from your WordPress admin.
 ## 📖 Usage
 
 ### Post View Count
+
 Post views are tracked automatically on every single post page load. The count is stored as `_neovantage_post_views_count` post meta. The theme displays it in post meta areas automatically.
 
 ### Demo Importer
+
 1. Go to **NEOVANTAGE → Demo Importer**
 2. Click **Import Demo**
 3. Wait for the import to complete — menus, widgets, and Customizer settings are all applied automatically
@@ -112,6 +120,7 @@ Post views are tracked automatically on every single post page load. The count i
 > ⚠️ Run the demo importer on a fresh WordPress installation only. Always back up before importing on an existing site.
 
 ### Customizer Export / Import
+
 1. Go to **NEOVANTAGE → Customizer Export/Import**
 2. Click **Export** to download your settings as a `.json` file
 3. On another site, upload that file using the **Import** button on the same page
@@ -121,9 +130,11 @@ Post views are tracked automatically on every single post page load. The count i
 ## 📝 Changelog
 
 ### 2.0.8 — 07 April, 2026
+
 - **Fix:** Plugin now boots on `plugins_loaded` hook instead of directly at file load — resolves `_load_textdomain_just_in_time` notice introduced in WordPress 6.7.
 
 ### 2.0.7 — 07 April, 2026
+
 - **Fix:** Corrected `GITHUB_OWNER` constant from `PixelsPress` to `mohsin-rafique` — wrong owner caused the GitHub Releases API to return 404, silently blocking all update notifications in Dashboard → Updates, Plugins list, and admin bar.
 - **Fix:** Updated plugin `url` and `homepage` in the updater from `pixelspress.com` to the correct GitHub repo (`github.com/mohsin-rafique/neovantage-core`).
 - **Fix:** Updated doc block API URL reference from `PixelsPress/neovantage-core` to `mohsin-rafique/neovantage-core`.
@@ -132,9 +143,10 @@ Post views are tracked automatically on every single post page load. The count i
 - **Improvement:** Plugin URI in plugin header updated to point to GitHub repo instead of `pixelspress.com`.
 - **Improvement:** Plugin description updated to accurately reflect all features.
 - **Improvement:** `plugins-data.json` added to repo root — single source of truth for version metadata used by the NEOVANTAGE theme's TGM plugin list.
-- **Bump:** Version raised to 2.0.7 in plugin header, `N_VERSION`, and `NC_VERSION` constants.
+- **Bump:** Version raised to 2.0.7 in plugin header, `NC_VERSION` constants.
 
 ### 2.0.6 — 05 April, 2026
+
 - **Compatibility:** Tested up to WordPress 6.9
 - **Compatibility:** Minimum PHP raised to 8.0; confirmed clean on PHP 8.4
 - **Improvement:** Plugin now self-manages update notices via built-in updater — badges appear in Dashboard → Updates, Plugins list, and admin bar
@@ -146,12 +158,15 @@ Post views are tracked automatically on every single post page load. The count i
 - **Fix:** Updated all `http://` links in System Status to `https://`
 
 ### 2.0.0 — 04 September, 2019
+
 - Full Gutenberg block editor compatibility
 
 ### 1.0.6 — 07 May, 2018
+
 - Feature: Post view count tracking and display
 
 ### 1.0.0 — 28 August, 2016
+
 - Initial release
 
 ---

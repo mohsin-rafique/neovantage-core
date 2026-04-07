@@ -38,19 +38,19 @@ class Neovantage_Core_Demos {
 		require_once NC_DIR_PATH . 'includes/importer/class-neovantage-core-demo-remove.php';
 
 		// Hook - Add Welcome Menu.
-		add_action( 'admin_menu', [ $this, 'nc_admin_menu' ], 30 );
+		add_action( 'admin_menu', array( $this, 'nc_admin_menu' ), 30 );
 
 		// By default TGMPA doesn't load in AJAX calls.
 		// Filter is applied inside a method which is hooked to 'init'.
-		add_filter( 'tgmpa_load', [ $this, 'enable_tgmpa' ], 10 );
+		add_filter( 'tgmpa_load', array( $this, 'enable_tgmpa' ), 10 );
 
-		add_action( 'wp_ajax_nc_activate_plugin', [ $this, 'nc_ajax_activate_plugin' ] );
+		add_action( 'wp_ajax_nc_activate_plugin', array( $this, 'nc_ajax_activate_plugin' ) );
 
-		add_action( 'wp_ajax_nc_install_plugin', [ $this, 'nc_ajax_install_plugin' ] );
+		add_action( 'wp_ajax_nc_install_plugin', array( $this, 'nc_ajax_install_plugin' ) );
 
 		// Load jQuery in the demos and plugins page.
 		if ( isset( $_GET['page'] ) && ( 'neovantage-demos' === $_GET['page'] ) ) { // phpcs:ignore WordPress.Security
-			add_action( 'admin_enqueue_scripts', [ $this, 'nc_add_jquery' ] );
+			add_action( 'admin_enqueue_scripts', array( $this, 'nc_add_jquery' ) );
 		}
 	}
 
@@ -67,7 +67,7 @@ class Neovantage_Core_Demos {
 				'Demos',
 				'manage_options',
 				'neovantage-demos',
-				[ $this, 'nc_demos_screen' ]
+				array( $this, 'nc_demos_screen' )
 			);
 		}
 	}
@@ -80,13 +80,13 @@ class Neovantage_Core_Demos {
 	public function nc_demos_screen() {
 		$page = filter_input( INPUT_GET, 'page' );
 
-		$theme_version = Neovantage_Core_Helper::normalize_version( N_VERSION );
+		$theme_version = Neovantage_Core_Helper::normalize_version( NC_VERSION );
 
 		$demos    = Neovantage_Core_Importer_Data::get_data();
-		$all_tags = [ 'all' => esc_attr__( 'All Demos', 'neovantage-core' ) ];
+		$all_tags = array( 'all' => esc_attr__( 'All Demos', 'neovantage-core' ) );
 		foreach ( $demos as $demo => $demo_details ) {
 			if ( ! isset( $demo_details['tags'] ) ) {
-				$demo_details['tags'] = [];
+				$demo_details['tags'] = array();
 			}
 			$all_tags = array_replace_recursive( $all_tags, $demo_details['tags'] );
 		}
@@ -100,38 +100,38 @@ class Neovantage_Core_Demos {
 		}
 
 		// Import / Remove demo.
-		$imported_data = get_option( 'neovantage_import_data', [] );
-		$import_stages = [
-			[
+		$imported_data = get_option( 'neovantage_import_data', array() );
+		$import_stages = array(
+			array(
 				'value'              => 'post',
 				'label'              => esc_html__( 'Posts', 'neovantage-core' ),
 				'data'               => 'content',
 				'feature_dependency' => 'post',
-			],
-			[
+			),
+			array(
 				'value'              => 'page',
 				'label'              => esc_html__( 'Pages', 'neovantage-core' ),
 				'data'               => 'content',
 				'feature_dependency' => 'page',
-			],
-			[
+			),
+			array(
 				'value' => 'attachment',
 				'label' => esc_html__( 'Images', 'neovantage-core' ),
 				'data'  => 'content',
-			],
-			[
+			),
+			array(
 				'value' => 'sliders',
 				'label' => esc_html__( 'Sliders', 'neovantage-core' ),
-			],
-			[
+			),
+			array(
 				'value' => 'theme_options',
 				'label' => esc_html__( 'Theme Options', 'neovantage-core' ),
-			],
-			[
+			),
+			array(
 				'value' => 'widgets',
 				'label' => esc_html__( 'Widgets', 'neovantage-core' ),
-			],
-		];
+			),
+		);
 
 		echo '<div class="neovantage-core">';
 			require_once NC_DIR_PATH . 'admin/partials/neovantage-core-header.php';
@@ -170,7 +170,7 @@ class Neovantage_Core_Demos {
 
 					if ( isset( $_GET['plugin'] ) && $plugin['slug'] === $_GET['plugin'] ) {
 						$result   = activate_plugin( $plugin['file_path'] );
-						$response = [];
+						$response = array();
 
 						// Make sure woo setup won't run after this.
 						if ( 'woocommerce' === $_GET['plugin'] ) {

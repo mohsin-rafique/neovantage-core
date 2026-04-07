@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main import handler.
  *
@@ -20,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Import a demo.
  */
 class Neovantage_Core_Demo_Import {
+
 
 	/**
 	 * The demo type.
@@ -285,7 +287,7 @@ class Neovantage_Core_Demo_Import {
 				/**
 				 * WIP
 				$this->content_tracker->set_general_data();
-				*/
+				 */
 				$this->after_import();
 
 				// Reset all caches, don't remove demo data.
@@ -324,7 +326,6 @@ class Neovantage_Core_Demo_Import {
 				wp_raise_memory_limit();
 			}
 		}
-
 	}
 
 	/**
@@ -340,7 +341,6 @@ class Neovantage_Core_Demo_Import {
 
 			$this->content_tracker->update_import_stage_data( 'all' );
 		}
-
 	}
 
 	/**
@@ -711,7 +711,6 @@ class Neovantage_Core_Demo_Import {
 		}
 
 		set_theme_mod( 'nav_menu_locations', $locations ); // Set menus to locations.
-
 	}
 
 	/**
@@ -823,7 +822,7 @@ class Neovantage_Core_Demo_Import {
 
 					if ( ! empty( $new_widgets[ $title ] ) && is_array( $new_widgets[ $title ] ) ) {
 						while ( array_key_exists( $new_index, $new_widgets[ $title ] ) ) {
-							$new_index++;
+							++$new_index;
 						}
 					}
 					$current_sidebars[ $import_sidebar ][] = $title . '-' . $new_index;
@@ -879,7 +878,7 @@ class Neovantage_Core_Demo_Import {
 			}
 		}
 		while ( in_array( $widget_name . '-' . $widget_index, $all_widget_array ) ) {
-			$widget_index++;
+			++$widget_index;
 		}
 		$new_widget_name = $widget_name . '-' . $widget_index;
 		return $new_widget_name;
@@ -937,7 +936,6 @@ class Neovantage_Core_Demo_Import {
 				}
 			}
 		}
-
 	}
 
 	/**
@@ -1000,7 +998,6 @@ class Neovantage_Core_Demo_Import {
 			// $nbc->import_sliders( $this->nbc_url, $this->demo_type );
 			remove_action( 'nbc_import_image_attached', array( $this, 'add_nbc_demo_import_meta' ), 10 );
 		}
-
 	}
 
 	/**

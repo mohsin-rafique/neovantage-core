@@ -102,7 +102,7 @@ Post in the [WordPress.org support forum](https://wordpress.org/support/theme/ne
 * Improvement: Plugin URI in plugin header updated to point to GitHub repo.
 * Improvement: Plugin description updated to accurately reflect all features.
 * Improvement: plugins-data.json added to repo root — single source of truth for version metadata used by the NEOVANTAGE theme's TGM plugin list.
-* Bump: Version raised to 2.0.7 in plugin header, N_VERSION, and NC_VERSION constants.
+* Bump: Version raised to 2.0.7 in plugin header, and NC_VERSION constants.
 
 = 2.0.6 - 05 April, 2026 =
 * Compatibility: Tested up to WordPress 6.9.
