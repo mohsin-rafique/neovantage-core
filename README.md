@@ -4,7 +4,7 @@
 
 **The official companion plugin for the [NEOVANTAGE WordPress theme](https://wordpress.org/themes/neovantage/).**
 
-[![Version](https://img.shields.io/badge/version-2.0.6-blue.svg)](https://github.com/mohsin-rafique/neovantage-core/releases)
+[![Version](https://img.shields.io/badge/version-2.0.7-blue.svg)](https://github.com/mohsin-rafique/neovantage-core/releases)
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![WordPress](https://img.shields.io/badge/WordPress-5.3%2B-21759b.svg)](https://wordpress.org/)
 [![PHP](https://img.shields.io/badge/PHP-8.0%2B-777bb3.svg)](https://www.php.net/)
