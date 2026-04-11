@@ -44,7 +44,14 @@ $nav_array = array(
 	),
 );
 
-// Fetch latest theme version from WordPress.org API (cached 12 hours).
+// Read the installed NEOVANTAGE theme version directly from its stylesheet header.
+// Targets the 'neovantage' slug explicitly so the value is correct whether the
+// active theme is NEOVANTAGE itself or a child theme built on top of it.
+$neovantage_theme             = wp_get_theme( 'neovantage' );
+$neovantage_installed_version = $neovantage_theme->exists() ? $neovantage_theme->get( 'Version' ) : '—';
+
+// Fetch the latest published theme version from the WordPress.org themes API
+// (cached for 12 hours to avoid hammering the API on every page load).
 $neovantage_wordpress_version_check = get_transient( 'neovantage_core_latest_theme_version' );
 if ( false === $neovantage_wordpress_version_check ) {
 	$api_response = wp_remote_get(
@@ -52,10 +59,14 @@ if ( false === $neovantage_wordpress_version_check ) {
 		array( 'timeout' => 5 )
 	);
 	if ( ! is_wp_error( $api_response ) ) {
-		$api_data = json_decode( wp_remote_retrieve_body( $api_response ) );
-		$neovantage_wordpress_version_check = isset( $api_data->version ) ? sanitize_text_field( $api_data->version ) : NC_VERSION;
+		$api_data                           = json_decode( wp_remote_retrieve_body( $api_response ) );
+		$neovantage_wordpress_version_check = isset( $api_data->version )
+			? sanitize_text_field( $api_data->version )
+			: $neovantage_installed_version;
 	} else {
-		$neovantage_wordpress_version_check = NC_VERSION;
+		// On network failure fall back to the locally installed version so the
+		// display is never blank and the comparison below stays a no-op.
+		$neovantage_wordpress_version_check = $neovantage_installed_version;
 	}
 	set_transient( 'neovantage_core_latest_theme_version', $neovantage_wordpress_version_check, 12 * HOUR_IN_SECONDS );
 }
@@ -71,13 +82,13 @@ if ( false === $neovantage_wordpress_version_check ) {
 		<div class="neovantage-core-version">
 			<h4 class="neovantage-core-v-i">
 				<?php esc_html_e( 'Installed: ', 'neovantage-core' ); ?>
-				<strong><?php printf( esc_html__( 'v%s', 'neovantage-core' ), NC_VERSION ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></strong>
+				<strong><?php printf( esc_html__( 'v%s', 'neovantage-core' ), esc_html( $neovantage_installed_version ) ); ?></strong>
 			</h4>
 			<h4 class="neovantage-core-v-sep">|</h4>
 			<h4 class="neovantage-core-v-l">
 				<?php esc_html_e( 'Latest: ', 'neovantage-core' ); ?>
 				<strong><?php printf( 'v%s', esc_html( $neovantage_wordpress_version_check ) ); ?></strong>
-				<?php if ( version_compare( $neovantage_wordpress_version_check, NC_VERSION, '>' ) ) { ?>
+				<?php if ( version_compare( $neovantage_wordpress_version_check, $neovantage_installed_version, '>' ) ) { ?>
 					<a href="<?php echo esc_url( admin_url( 'update-core.php' ) ); ?>"><?php esc_html_e( 'Update(s) available!', 'neovantage-core' ); ?></a>
 				<?php } ?>
 			</h4>

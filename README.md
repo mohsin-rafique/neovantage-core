@@ -4,7 +4,7 @@
 
 **The official companion plugin for the [NEOVANTAGE WordPress theme](https://wordpress.org/themes/neovantage/).**
 
-[![Version](https://img.shields.io/badge/version-2.0.8-blue.svg)](https://github.com/mohsin-rafique/neovantage-core/releases)
+[![Version](https://img.shields.io/badge/version-2.0.9-blue.svg)](https://github.com/mohsin-rafique/neovantage-core/releases)
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![WordPress](https://img.shields.io/badge/WordPress-5.3%2B-21759b.svg)](https://wordpress.org/)
 [![PHP](https://img.shields.io/badge/PHP-8.0%2B-777bb3.svg)](https://www.php.net/)
@@ -128,6 +128,10 @@ Post views are tracked automatically on every single post page load. The count i
 ---
 
 ## 📝 Changelog
+
+### 2.0.9 — 11 April, 2026
+
+- **Fix:** Admin header "Installed" version now reads from the NEOVANTAGE theme directory (`style.css` via `wp_get_theme()`) instead of the plugin's own `NC_VERSION` constant — the displayed version correctly reflects the installed theme version.
 
 ### 2.0.8 — 07 April, 2026
 
