@@ -4,7 +4,7 @@ Tags: neovantage, blog, post views, widgets, demo importer
 Requires at least: 5.3
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.0.9
+Stable tag: 2.0.10
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,6 +89,9 @@ Post in the [WordPress.org support forum](https://wordpress.org/support/theme/ne
 6. Customizer Export / Import panel.
 
 == Changelog ==
+
+= 2.0.10 - 20 April, 2026 =
+* Fix: Updated plugins-data.json — version and latest_version for NEOVANTAGE Core bumped from 2.0.8 to 2.0.9 so the NEOVANTAGE theme's Install Plugins screen displays the correct version.
 
 = 2.0.9 - 11 April, 2026 =
 * Fix: Admin header "Installed" version now reads from the NEOVANTAGE theme directory (style.css via wp_get_theme()) instead of the plugin's own NC_VERSION constant — the displayed version now correctly reflects the installed theme version.
