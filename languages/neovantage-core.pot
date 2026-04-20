@@ -1,0 +1,1124 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: NEOVANTAGE Core\n"
+"POT-Creation-Date: 2020-04-26 17:47+0500\n"
+"PO-Revision-Date: 2020-04-26 17:47+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: neovantage-core.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin/class-neovantage-core-admin.php:177
+msgid "Share The Love!"
+msgstr ""
+
+#: admin/class-neovantage-core-admin.php:198
+msgid "Content"
+msgstr ""
+
+#: admin/class-neovantage-core-admin.php:199
+#: admin/partials/neovantage-core-demos.php:83
+msgid "Modify"
+msgstr ""
+
+#: admin/class-neovantage-core-admin.php:200
+#: admin/partials/neovantage-core-demos.php:86
+msgid "Full Import"
+msgstr ""
+
+#: admin/class-neovantage-core-admin.php:201
+#: admin/partials/neovantage-core-demos.php:88
+msgid "Partial Import"
+msgstr ""
+
+#: admin/class-neovantage-core-admin.php:202
+#: admin/partials/neovantage-core-demos.php:83
+#: admin/partials/neovantage-core-demos.php:105
+#: admin/partials/neovantage-core-demos.php:184
+msgid "Import"
+msgstr ""
+
+#: admin/class-neovantage-core-admin.php:203
+msgid "Download"
+msgstr ""
+
+#: admin/class-neovantage-core-admin.php:204
+msgid ""
+"Importing demo content will give you slider, pages, posts, theme options, "
+"widgets, sidebars and other settings. This will replicate the live demo. "
+"<strong>Clicking this option will replace your current theme options and "
+"widgets.</strong> It can also take a minute to complete.<br /><br /"
+">REQUIREMENTS:<br /><br />• Memory Limit of 256 MB and max execution time "
+"(php time limit) of 300 seconds.<br /><br />• NEO Bootstrap Carousel must be "
+"activated for slider to import.<br /><br />• NEOVANTAGE Core must be "
+"activated for NEOVANTAGE extended features to be imported.<br /><br />• "
+"Contact Form 7 plugin must be activated for the form to import."
+msgstr ""
+
+#: admin/class-neovantage-core-admin.php:205
+msgid ""
+"Importing demo content will give you slider, pages, posts, theme options, "
+"widgets, sidebars and other settings. This will replicate the live demo. "
+"<strong>Clicking this option will replace your current theme options and "
+"widgets.</strong> It can also take a minute to complete.<br /><br /> "
+"REQUIREMENTS:<br /><br />• Memory Limit of 128 MB and max execution time "
+"(php time limit) of 180 seconds.<br /><br />• NEO Bootstrap Carousel must be "
+"activated for slider to import.<br /><br />• Contact Form 7 plugin must be "
+"activated for the form to import."
+msgstr ""
+
+#. translators: The current step label.
+#: admin/class-neovantage-core-admin.php:207
+#, php-format
+msgid "Currently Processing: %s"
+msgstr ""
+
+#. translators: The current step label.
+#: admin/class-neovantage-core-admin.php:209
+#, php-format
+msgid "Currently Removing: %s"
+msgstr ""
+
+#: admin/class-neovantage-core-admin.php:210
+#: includes/importer/lib/class-wxr-importer.php:512
+msgid "The file does not exist"
+msgstr ""
+
+#. translators: URL.
+#: admin/class-neovantage-core-admin.php:212
+#, php-format
+msgid ""
+"Demo server couldn't be reached. Please check for wp_remote_get on the <a "
+"href=\"%s\" target=\"_blank\">System Status</a> page."
+msgstr ""
+
+#. translators: URL.
+#: admin/class-neovantage-core-admin.php:214
+#, php-format
+msgid ""
+"Demo import failed. Please check for PHP limits in red on the <a href=\"%s\" "
+"target=\"_blank\">System Status</a> page. Change those to the recommended "
+"value and try again."
+msgstr ""
+
+#: admin/class-neovantage-core-admin.php:215
+msgid ""
+"Removing demo content will remove ALL previously imported demo content from "
+"this demo and restore your site to the previous state it was in before this "
+"demo content was imported."
+msgstr ""
+
+#. translators: URL.
+#: admin/class-neovantage-core-admin.php:217
+#, php-format
+msgid ""
+"This plugin can only be installed or updated, after you have successfully "
+"completed the NEOVANTAGE product registration on the <a href=\"%s\" target="
+"\"_blank\">Product Registration</a> tab."
+msgstr ""
+
+#: admin/class-neovantage-core-admin.php:218
+msgid "Plugin install failed. Please try Again."
+msgstr ""
+
+#: admin/class-neovantage-core-admin.php:219
+#: admin/partials/neovantage-core-demos.php:132
+msgid "Active"
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:48
+msgid "All"
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:107
+msgid "Preview"
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:114
+msgid "Live Preview"
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:120
+msgid "The following plugins are required to import content."
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:129
+msgid "Install"
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:135
+msgid "Activate"
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:168
+msgid "Import Content"
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:168
+msgid "(menus only import with \"All\")"
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:173
+msgid "Remove Content"
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:174
+#: admin/partials/neovantage-core-demos.php:185
+msgid "Remove"
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:186
+msgid "Done"
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:194
+msgid "Error "
+msgstr ""
+
+#: admin/partials/neovantage-core-demos.php:198
+msgid "Warning "
+msgstr ""
+
+#: admin/partials/neovantage-core-faq.php:17
+#: admin/partials/neovantage-core-faq.php:29
+#: admin/partials/neovantage-core-header.php:34
+#: includes/admin/class-neovantage-core-faq.php:46
+#: includes/admin/class-neovantage-core-faq.php:47
+msgid "FAQ"
+msgstr ""
+
+#: admin/partials/neovantage-core-faq.php:21
+msgid ""
+"These are general frequently asked questions to help you get started. For "
+"more in-depth documentation, please visit our online support center to view "
+"documentation and knowledgebase tutorials."
+msgstr ""
+
+#: admin/partials/neovantage-core-faq.php:22
+msgid "How Do I Get Support For NEOVANTAGE?"
+msgstr ""
+
+#: admin/partials/neovantage-core-header.php:16
+#: includes/admin/class-neovantage-core-welcome.php:55
+#: includes/admin/class-neovantage-core-welcome.php:56
+msgid "Welcome"
+msgstr ""
+
+#: admin/partials/neovantage-core-header.php:22
+msgid "Plugins"
+msgstr ""
+
+#: admin/partials/neovantage-core-header.php:28
+msgid "Demos"
+msgstr ""
+
+#: admin/partials/neovantage-core-header.php:40
+#: admin/partials/neovantage-core-system-status.php:20
+#: admin/partials/neovantage-core-system-status.php:572
+msgid "System Status"
+msgstr ""
+
+#: admin/partials/neovantage-core-header.php:60
+msgid "Installed: "
+msgstr ""
+
+#: admin/partials/neovantage-core-header.php:61
+#: admin/partials/neovantage-core-header.php:66
+#, php-format
+msgid "v%s"
+msgstr ""
+
+#: admin/partials/neovantage-core-header.php:63
+msgid "|"
+msgstr ""
+
+#: admin/partials/neovantage-core-header.php:65
+msgid "Latest: "
+msgstr ""
+
+#: admin/partials/neovantage-core-header.php:68
+msgid "Update(s) available!"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:22
+#: admin/partials/neovantage-core-system-status.php:574
+msgid "Get System Report"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:27
+msgid ""
+"Click the Get System Report button at the top right to produce a report, "
+"then copy and paste into your support ticket."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:31
+msgid "Copied!"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:31
+msgid "Copy for Support"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:38
+msgid "WordPress Environment"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:43
+msgid "Home URL"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:44
+msgid "The URL of your site's homepage."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:48
+msgid "Site URL"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:49
+msgid "The root URL of your site."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:53
+msgid "NEOVANTAGE Core Version"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:54
+msgid "The version of NEOVANTAGE Core installed on your site."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:58
+msgid "WordPress Version"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:59
+msgid "The version of WordPress installed on your site."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:78
+#, php-format
+msgid "%1$s - There is a newer version of WordPress available (%2$s)"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:86
+msgid "WordPress Multisite"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:87
+msgid "Whether or not you have WordPress Multisite enabled."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:91
+msgid "WordPress Memory Limit"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:92
+msgid "The maximum amount of memory (RAM) that your site can use at one time."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:97
+#, php-format
+msgid "%1$s - We recommend setting memory to at least 64MB. See: %2$s"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:97
+msgid "Increasing memory allocated to PHP"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:105
+msgid "WP Debug Mode"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:106
+msgid "Displays whether or not WordPress is in Debug Mode."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:116
+msgid "WordPress Cron"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:117
+msgid "Displays whether or not WP Cron Jobs are enabled."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:127
+msgid "Language"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:128
+msgid "The current language used by WordPress. Default = English"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:132
+msgid "External Object Cache"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:133
+msgid "Displays whether or not WordPress is using an external object cache."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:150
+msgid "Server Environment"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:155
+msgid "Server Info:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:156
+msgid "Information about the web server that is currently hosting your site."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:160
+msgid "PHP Version:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:161
+msgid "The version of PHP installed on your hosting server."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:167
+msgid "WordPress Requirements"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:171
+msgid ""
+"NEOVANTAGE Core will run under this version of PHP, however, it has reached "
+"end of life. We recommend using PHP version 7.2 or above for greater "
+"performance and security."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:173
+msgid ""
+"WordPress recommend PHP version 7.2 or above for greater performance and "
+"security."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:183
+msgid "PHP Post Max Size:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:184
+msgid "The largest file size that can be contained in one post."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:188
+msgid "PHP Time Limit:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:189
+msgid ""
+"The amount of time (in seconds) that your site will spend on a single "
+"operation before timing out (to avoid server lockups)"
+msgstr ""
+
+#. translators: %1$s: Current value. %2$s: URL.
+#: admin/partials/neovantage-core-system-status.php:196
+#, php-format
+msgid ""
+"%1$s - We recommend setting max execution time to at least 180.<br />See: <a "
+"href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">Increasing max "
+"execution to PHP</a>"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:204
+msgid "PHP Max Input Vars:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:205
+#: admin/partials/neovantage-core-system-status.php:248
+#: admin/partials/neovantage-core-system-status.php:280
+msgid ""
+"The maximum number of variables your server can use for a single function to "
+"avoid overloads."
+msgstr ""
+
+#. translators: %1$s: Current value. $2%s: Recommended value. %3$s: URL.
+#: admin/partials/neovantage-core-system-status.php:228
+#: admin/partials/neovantage-core-system-status.php:271
+#: admin/partials/neovantage-core-system-status.php:303
+#, php-format
+msgid ""
+"%1$s - Recommended Value: %2$s.<br />Max input vars limitation will truncate "
+"POST data such as menus. See: <a href=\"%3$s\" target=\"_blank\" rel="
+"\"noopener noreferrer\">Increasing max input vars limit.</a>"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:236
+msgid "cURL version"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:237
+msgid "The version of cURL installed on your server."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:241
+msgid "SUHOSIN Installed:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:242
+msgid ""
+"Suhosin is an advanced protection system for PHP installations. It was "
+"designed to protect your servers on the one hand against a number of well "
+"known problems in PHP applications and on the other hand against potential "
+"unknown vulnerabilities within these applications or the PHP core itself. If "
+"enabled on your server, Suhosin may need to be configured to increase its "
+"data submission limits."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:247
+msgid "Suhosin Post Max Vars"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:279
+msgid "Suhosin Request Max Vars:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:311
+msgid "Suhosin Post Max Value Length:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:312
+msgid ""
+"Defines the maximum length of a variable that is registered through a POST "
+"request."
+msgstr ""
+
+#. translators: %1$s: Current value. $2%s: Recommended value. %3$s: URL.
+#: admin/partials/neovantage-core-system-status.php:320
+#, php-format
+msgid ""
+"%1$s - Recommended Value: %2$s.<br />Post Max Value Length limitation may "
+"prohibit the Theme Options data from being saved to your database. See: <a "
+"href=\"%3$s\" target=\"_blank\" rel=\"noopener noreferrer\">Suhosin "
+"Configuration Info</a>."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:330
+msgid "ZipArchive:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:331
+msgid ""
+"ZipArchive is required for importing NEOVANTAGE Core Option Settings. They "
+"are used to import and export zip files."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:335
+msgid "MySQL Version:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:336
+msgid "The version of MySQL installed on your hosting server."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:341
+#, php-format
+msgid "%1$s - We recommend a minimum MySQL version of 5.6. See: %2$s"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:341
+msgid "WordPress requirements"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:349
+msgid "Max Upload Size:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:350
+msgid ""
+"The largest file size that can be uploaded to your WordPress installation."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:354
+msgid "Default timezone is UTC"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:355
+msgid "The default timezone for your server."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:360
+#, php-format
+msgid "Default timezone is %s - it should be UTC"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:368
+msgid "DOMDocument:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:369
+msgid "DOMDocument is required for document traversing to properly function."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:376
+#, php-format
+msgid ""
+"Your server does not have the %s class enabled - HTML/Multipart emails, and "
+"also some extensions, will not work without DOMDocument."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:382
+msgid "GZip"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:383
+msgid "GZip (gzopen) is used to make your site load faster."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:390
+#, php-format
+msgid ""
+"Your server does not support the %s function - this is required to make your "
+"site load faster."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:396
+msgid "WP Remote Get:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:397
+#: admin/partials/neovantage-core-system-status.php:411
+msgid ""
+"NEOVANTAGE Core uses this method to communicate with different APIs, e.g. "
+"Google, Twitter, Facebook."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:404
+#: admin/partials/neovantage-core-system-status.php:418
+#, php-format
+msgid "%s failed. Contact your hosting provider."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:410
+msgid "WP Remote Post:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:424
+msgid "GD Library:"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:425
+msgid ""
+"NEOVANTAGE Core uses this library to resize images and speed up your site's "
+"loading time"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:428
+msgid "Not Installed"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:430
+msgid "Installed"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:447
+msgid "Theme"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:452
+msgid "Name"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:453
+msgid "The name of the current active theme."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:457
+msgid "Version"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:458
+msgid "The installed version of the current active theme."
+msgstr ""
+
+#. translators: %s: theme latest version
+#. translators: %s: parent theme latest version
+#: admin/partials/neovantage-core-system-status.php:465
+#: admin/partials/neovantage-core-system-status.php:506
+#, php-format
+msgid "%s is available"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:472
+msgid "Author URL"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:473
+msgid "The theme developers URL."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:478
+msgid "Child theme"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:479
+msgid "Displays whether or not the current theme is a child theme."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:486
+#, php-format
+msgid ""
+"If you are modifying NEOVANTAGE on a parent theme that you did not build "
+"personally we recommend using a child theme. See: <a href=\"%s\" target="
+"\"_blank\">How to create a child theme</a>"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:494
+msgid "Parent Theme Name"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:495
+msgid "The name of the parent theme."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:499
+msgid "Parent Theme Version"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:500
+msgid "The installed version of the parent theme."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:512
+msgid "Parent Theme Author URL"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:513
+msgid "The parent theme developers URL."
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:531
+msgid "Active Plugins"
+msgstr ""
+
+#: admin/partials/neovantage-core-system-status.php:548
+msgid "Visit plugin homepage"
+msgstr ""
+
+#. translators: plugin author.
+#: admin/partials/neovantage-core-system-status.php:558
+#, php-format
+msgid "by %s"
+msgstr ""
+
+#: admin/partials/neovantage-core-welcome.php:17
+msgid "Getting Started"
+msgstr ""
+
+#: admin/partials/neovantage-core-welcome.php:21
+msgid "Thank you for installing our plugin."
+msgstr ""
+
+#: admin/partials/neovantage-core-welcome.php:22
+msgid ""
+"NEOVANTAGE has been successfully installed. You can now use it. Just "
+"register yourself so that you can receive automatic theme updates. You will "
+"also be able to import NEOVANTAGE demos and install all the plugins that are "
+"available. If you want to get product support, check out our Support Tab. We "
+"hope that the experience is a good one for you and you’re able to create "
+"something great."
+msgstr ""
+
+#: admin/partials/neovantage-core-welcome.php:60
+msgid "Credits"
+msgstr ""
+
+#: admin/partials/neovantage-core-welcome.php:64
+msgid " was developed with ❤ by PixelsPress."
+msgstr ""
+
+#: admin/partials/neovantage-core-welcome.php:66
+msgid "Project Leader"
+msgstr ""
+
+#: includes/admin/class-neovantage-core-demos.php:86
+msgid "All Demos"
+msgstr ""
+
+#: includes/admin/class-neovantage-core-demos.php:107
+msgid "Posts"
+msgstr ""
+
+#: includes/admin/class-neovantage-core-demos.php:113
+msgid "Pages"
+msgstr ""
+
+#: includes/admin/class-neovantage-core-demos.php:119
+msgid "Images"
+msgstr ""
+
+#: includes/admin/class-neovantage-core-demos.php:124
+msgid "Sliders"
+msgstr ""
+
+#: includes/admin/class-neovantage-core-demos.php:128
+msgid "Theme Options"
+msgstr ""
+
+#: includes/admin/class-neovantage-core-demos.php:132
+msgid "Widgets"
+msgstr ""
+
+#: includes/admin/class-neovantage-core-welcome.php:73
+#: includes/admin/class-neovantage-core-welcome.php:77
+msgid "Starter Guide"
+msgstr ""
+
+#: includes/admin/class-neovantage-core-welcome.php:75
+msgid ""
+"It’s hard to start working on WordPress if you are not used to it. That’s "
+"why we have created a starter pack containing everything you need to know."
+msgstr ""
+
+#: includes/admin/class-neovantage-core-welcome.php:80
+#: includes/admin/class-neovantage-core-welcome.php:84
+msgid "Documentation"
+msgstr ""
+
+#: includes/admin/class-neovantage-core-welcome.php:82
+msgid ""
+"You can also explore the different aspects of the theme here. The online "
+"documentation provides an easy way to learn all the basics of NEOVANTAGE."
+msgstr ""
+
+#: includes/admin/class-neovantage-core-welcome.php:87
+#: includes/admin/class-neovantage-core-welcome.php:91
+msgid "Submit A Ticket"
+msgstr ""
+
+#: includes/admin/class-neovantage-core-welcome.php:89
+msgid ""
+"We have an advance ticket system that allows the users to access all the "
+"support services. You just have to ensure that you are registered with it."
+msgstr ""
+
+#: includes/admin/class-neovantage-core-welcome.php:97
+msgid "Mohsin Rafique"
+msgstr ""
+
+#: includes/class-neovantage-core-post-view-count.php:138
+msgid "Views"
+msgstr ""
+
+#: includes/importer/lib/class-logger-html.php:17
+msgid "Sorry, there has been an error."
+msgstr ""
+
+#: includes/importer/lib/class-neovantage-wxr-importer.php:85
+#: includes/importer/lib/class-wxr-importer.php:673
+msgid "Cannot import auto-draft posts"
+msgstr ""
+
+#: includes/importer/lib/class-neovantage-wxr-importer.php:267
+#: includes/importer/lib/class-wxr-importer.php:1848
+#, php-format
+msgid "Remote server returned %1$d %2$s for %3$s"
+msgstr ""
+
+#: includes/importer/lib/class-neovantage-wxr-importer.php:283
+#: includes/importer/lib/class-wxr-importer.php:1861
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: includes/importer/lib/class-neovantage-wxr-importer.php:288
+#: includes/importer/lib/class-wxr-importer.php:1866
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: includes/importer/lib/class-neovantage-wxr-importer.php:294
+#: includes/importer/lib/class-wxr-importer.php:1872
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: includes/importer/lib/class-neovantage-wxr-importer.php:487
+#: includes/importer/lib/class-wxr-importer.php:1758
+#, php-format
+msgid "Failed to import %1$s %2$s"
+msgstr ""
+
+#: includes/importer/lib/class-neovantage-wxr-importer.php:513
+#: includes/importer/lib/class-wxr-importer.php:927
+#: includes/importer/lib/class-wxr-importer.php:1784
+#, php-format
+msgid "Imported \"%1$s\" (%2$s)"
+msgstr ""
+
+#: includes/importer/lib/class-neovantage-wxr-importer.php:520
+#: includes/importer/lib/class-wxr-importer.php:1791
+#, php-format
+msgid "Term %1$d remapped to %2$d"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:132
+msgid "Could not open the file for parsing"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:169
+#: includes/importer/lib/class-wxr-importer.php:287
+#: includes/importer/lib/class-wxr-importer.php:362
+#, php-format
+msgid ""
+"This WXR file (version %1$s) is newer than the importer (version %2$s) and "
+"may not be supported. Please consider updating."
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:512
+#, php-format
+msgid "%s, please try again."
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:572
+msgid "Invalid author mapping"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:762
+#, php-format
+msgid "Failed to import \"%1$s\": Invalid post type %2$s"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:774
+#, php-format
+msgid "%1$s \"%2$s\" already exists."
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:870
+#, php-format
+msgid "Skipping attachment \"%s\", fetching attachments disabled"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:893
+#, php-format
+msgid "Failed to import \"%1$s\" (%2$s)"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:934
+#, php-format
+msgid "Post %1$d remapped to %2$d"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:1082
+msgid "Invalid file type"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:1581
+#, php-format
+msgid "Failed to import user \"%s\""
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:1604
+#, php-format
+msgid "Imported user \"%s\""
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:1610
+#, php-format
+msgid "User %1$d remapped to %2$d"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:1895
+#, php-format
+msgid "Running post-processing for post %d"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:1910
+#, php-format
+msgid "Could not find the post parent for \"%1$s\" (post #%2$d)"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:1917
+#, php-format
+msgid "Post %1$d was imported with parent %2$d, but could not be found"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:1933
+#, php-format
+msgid "Could not find the author for \"%1$s\" (post #%2$d)"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:1940
+#, php-format
+msgid "Post %1$d was imported with author \"%2$s\", but could not be found"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:1968
+#, php-format
+msgid "Post %d was marked for post-processing, but none was required."
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:1981
+#, php-format
+msgid "Could not update \"%1$s\" (post #%2$d) with mapped data"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:2028
+#, php-format
+msgid "Could not find the menu object for \"%1$s\" (post #%2$d)"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:2035
+#, php-format
+msgid ""
+"Post %1$d was imported with object \"%2$d\" of type \"%3$s\", but could not "
+"be found"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:2059
+#, php-format
+msgid "Could not find the comment parent for comment #%d"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:2065
+#, php-format
+msgid "Comment %1$d was imported with parent %2$d, but could not be found"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:2081
+#, php-format
+msgid "Could not find the author for comment #%d"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:2087
+#, php-format
+msgid "Comment %1$d was imported with author %2$d, but could not be found"
+msgstr ""
+
+#: includes/importer/lib/class-wxr-importer.php:2106
+#, php-format
+msgid "Could not update comment #%d with mapped data"
+msgstr ""
+
+#: includes/meta-box/class-neovantage-core-audio-meta-box.php:93
+#: includes/meta-box/class-neovantage-core-user-meta-box.php:62
+msgid "Audio URL"
+msgstr ""
+
+#: includes/meta-box/class-neovantage-core-audio-meta-box.php:97
+#: includes/meta-box/class-neovantage-core-user-meta-box.php:66
+msgid "Browse Audio File"
+msgstr ""
+
+#: includes/meta-box/class-neovantage-core-audio-meta-box.php:98
+#: includes/meta-box/class-neovantage-core-user-meta-box.php:67
+#: includes/meta-box/class-neovantage-core-video-meta-box.php:67
+msgid "List of supported sites"
+msgstr ""
+
+#: includes/meta-box/class-neovantage-core-link-meta-box.php:94
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:203
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:229
+msgid "Title"
+msgstr ""
+
+#: includes/meta-box/class-neovantage-core-link-meta-box.php:98
+msgid "Insert the URL Title you wish to name to."
+msgstr ""
+
+#: includes/meta-box/class-neovantage-core-link-meta-box.php:102
+msgid "URL"
+msgstr ""
+
+#: includes/meta-box/class-neovantage-core-link-meta-box.php:105
+msgid "Insert the URL you wish to link to."
+msgstr ""
+
+#: includes/meta-box/class-neovantage-core-quote-meta-box.php:63
+msgid "Author"
+msgstr ""
+
+#: includes/meta-box/class-neovantage-core-quote-meta-box.php:67
+msgid "Put quote author in this field."
+msgstr ""
+
+#: includes/meta-box/class-neovantage-core-video-meta-box.php:62
+msgid "Video URL"
+msgstr ""
+
+#: includes/meta-box/class-neovantage-core-video-meta-box.php:66
+msgid "Browse Video File"
+msgstr ""
+
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:42
+msgid "A widget for displaying the latest posts"
+msgstr ""
+
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:44
+msgid "NEOVANTAGE Latest Posts"
+msgstr ""
+
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:46
+msgid "Latest Posts"
+msgstr ""
+
+#. translators: %1$s: month name
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:88
+#, php-format
+msgid "%1$s ago"
+msgstr ""
+
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:209
+msgid "Number of Posts to Show"
+msgstr ""
+
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:215
+msgid "Category"
+msgstr ""
+
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:217
+msgid "All Categories"
+msgstr ""
+
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:226
+msgid "Sort By"
+msgstr ""
+
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:228
+msgid "Date"
+msgstr ""
+
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:230
+msgid "Number of comments"
+msgstr ""
+
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:231
+msgid "Random"
+msgstr ""
+
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:232
+msgid "Modified"
+msgstr ""
+
+#: includes/widgets/class-neovantage-core-widget-recent-posts.php:239
+msgid "Reverse Sort Order (Ascending)"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "NEOVANTAGE Core"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://pixelspress.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "NEOVANTAGE CORE Plugin for NEOVANTAGE Theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "PixelsPress, Mohsin Rafique"
+msgstr ""

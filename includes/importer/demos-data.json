@@ -1,0 +1,26 @@
+{
+    "classic": {
+        "tags": {
+            "blog": "Blog"
+        },
+        "minVersion": "2.0.0",
+        "shop": false,
+        "features": ["post", "page"],
+        "plugin_dependencies": {
+            "contact-form-7": true,
+            "neo-bootstrap-carousel": true
+        },
+        "new": false,
+        "sidebars": {
+            "search-2": "",
+            "nc-recent-posts-2": "Latest Posts",
+            "categories-2": "Categories",
+            "recent-comments-2": "Recent Comments",
+            "archives-2": "Archives"
+        },
+        "homeTitle": "Home",
+        "preview-image": "https://downloads.pixelspress.com/classic-thumbnail.png",
+        "preview-image-retina": "https://downloads.pixelspress.com/classic-thumbnail.png",
+        "zip-file": "https://downloads.pixelspress.com/classic.zip"
+    }
+}

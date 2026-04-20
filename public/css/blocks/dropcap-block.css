@@ -1,0 +1,24 @@
+/*------------------------------------------------------------------------------
+# Shortcode -> DropBox
+------------------------------------------------------------------------------*/
+.dropcap {
+  display: block;
+  margin: 0;
+  text-align: justify;
+  clear: both;
+}
+.dropcap:first-letter {
+  float: left;
+  font-size: 74px;
+  line-height: 1;
+  margin: 0 10px -10px 0;
+  padding: 10px;
+}
+.dropcap.primary-square:first-letter,
+.dropcap.primary-circle:first-letter {
+  background: #e97e0a;
+  color: #fff;
+}
+.dropcap.primary-circle:first-letter {
+  border-radius: 50%;
+}
