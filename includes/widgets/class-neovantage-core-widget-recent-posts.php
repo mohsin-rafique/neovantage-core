@@ -79,17 +79,6 @@ class Neovantage_Core_Widget_Recent_Posts extends WP_Widget {
 			$sort_order = 'DESC';
 		}
 
-		// Setup time/date
-		// TODO: is this still needed?
-		$post_date = the_date( 'Y-m-d', '', '', false );
-		$month_ago = date( 'Y-m-d', mktime( 0, 0, 0, date( 'm' ) - 1, date( 'd' ), date( 'Y' ) ) );
-		if ( $post_date > $month_ago ) {
-			/* translators: %1$s: month name */
-			$post_date = sprintf( esc_html__( '%1$s ago', 'neovantage-core' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) );
-		} else {
-			$post_date = get_the_date();
-		}
-
 		$args = array(
 			'orderby'             => $sort_by,
 			'order'               => $sort_order,

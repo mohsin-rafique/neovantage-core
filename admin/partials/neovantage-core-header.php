@@ -78,7 +78,7 @@ if ( false === $neovantage_wordpress_version_check ) {
 		<img src="<?php echo NC_DIR_URL; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>admin/images/neovantage-header-logo.png" alt="<?php echo esc_attr( NC_NAME ); ?>" />
 	</div>
 	<div class="neovantage-core-title">
-		<h1><?php echo esc_attr( NC_NAME ); ?></h1>
+		<h1><?php esc_html_e( 'NEOVANTAGE', 'neovantage-core' ); ?></h1>
 		<div class="neovantage-core-version">
 			<h4 class="neovantage-core-v-i">
 				<?php esc_html_e( 'Installed: ', 'neovantage-core' ); ?>
@@ -106,7 +106,7 @@ if ( false === $neovantage_wordpress_version_check ) {
 			?>
 		<a href="<?php echo esc_url( $val['menu-url'] ); ?>" class="nav-tab <?php echo sanitize_html_class( $val['menu-class'] ); ?> <?php echo ( sanitize_html_class( $val['menu-page-class'] ) == $page ) ? 'nav-tab-active' : ''; ?>"><span><?php echo intval( $i ); ?></span><?php echo esc_attr( $val['menu-title'] ); ?></a>
 			<?php
-			$i++;
+			++$i;
 		endforeach;
 	endif;
 	?>

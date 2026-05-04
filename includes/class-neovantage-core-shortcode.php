@@ -16,6 +16,17 @@
  *
  * Responsible for initializing all shortcodes classes and filters using in PixelsPress.
  *
+ * Shortcode tag prefix — frozen contract:
+ * The eight tags registered by the child classes ([neovantage_container],
+ * [neovantage_row], [neovantage_column], [neovantage_title], [neovantage_gap],
+ * [neovantage_hr], [neovantage_button], [neovantage_content_box]) use the
+ * `neovantage_` prefix because they predate the plugin's later `nc_` naming
+ * convention. They are part of saved post content on every site that has ever
+ * used these shortcodes, so renaming any tag is a Breaking change that would
+ * silently strip those blocks from existing posts. Keep the slugs as-is. New
+ * shortcodes added to this plugin should use the `nc_` prefix; the legacy
+ * `neovantage_*` tags above are an explicit, documented carve-out.
+ *
  * @since      1.0.0
  * @package    Neovantage_Core
  * @subpackage Neovantage_Core/includes

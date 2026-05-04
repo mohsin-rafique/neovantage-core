@@ -4,7 +4,7 @@
 
 **The official companion plugin for the [NEOVANTAGE WordPress theme](https://wordpress.org/themes/neovantage/).**
 
-[![Version](https://img.shields.io/badge/version-2.0.10-blue.svg)](https://github.com/mohsin-rafique/neovantage-core/releases)
+[![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/mohsin-rafique/neovantage-core/releases)
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![WordPress](https://img.shields.io/badge/WordPress-5.3%2B-21759b.svg)](https://wordpress.org/)
 [![PHP](https://img.shields.io/badge/PHP-8.0%2B-777bb3.svg)](https://www.php.net/)
@@ -164,6 +164,20 @@ Post in the [WordPress.org support forum](https://wordpress.org/support/theme/ne
 ---
 
 ## 📝 Changelog
+
+### 2.1.0 — 6 May, 2026
+
+Released alongside NEOVANTAGE theme 2.1.0 — the two packages ship the same day to capture the theme.json design-token surface and the companion plugin polish as one user-visible upgrade.
+
+- **Improvement:** Post view counter now skips the increment when an administrator (`manage_options` capability) is logged in. Self-views from the team that runs the site no longer inflate the public counter. Behaviour is filterable via the new `neovantage_skip_post_view_count` hook (`bool $skip, WP_Post $post`); return `true` to skip a view, `false` to count. Sites that want broader exclusion (editors, authors, all logged-in users) can add a one-line callback. Existing counters are untouched — only future increments are affected.
+- **Feature:** Shipped the `neovantage-blocks/button` Gutenberg block — the block-editor counterpart of the `[neovantage_button]` shortcode. Build-free implementation (`block.json` + editor JS using `window.wp.*` globals, no JSX/Babel/webpack). Inspector grouped into Button (label/URL/target) and Appearance (style/size/alignment/full-width) panels. PHP `render_callback` delegates to the same renderer the shortcode uses, so block and shortcode emit identical HTML and stay in lockstep on future tweaks.
+- **Security:** Hardened `Neovantage_Core_Shortcode_Button::neovantage_button()` — link text and title attribute are now properly escaped (`esc_html` / `esc_attr`), every input is validated against an enum (or normalized through `FILTER_VALIDATE_BOOLEAN` for full-width), and `rel="noopener noreferrer"` is added automatically whenever `target="_blank"` to prevent reverse-tabnabbing. The default URL placeholder also changed from the non-standard `'#.'` to `'#'`. No visible change for any well-formed `[neovantage_button]` invocation.
+- **Fix:** Renamed `neovantage_custom_contact_info()` to `nc_custom_contact_info()` to match the `add_filter( 'user_contactmethods', ... )` callback name — resolves a fatal "callback not found" TypeError on REST `/wp/v2/users/me` updates and any path that triggers `wp_get_user_contact_methods()`. Also corrected the textdomain on the two contact-field labels from `neovantage` to `neovantage-core`.
+- **i18n:** Normalized escape levels in `Neovantage_Core_Admin::nc_get_admin_script_l10n_strings()` — plain-text JS labels now use `esc_html__()` (matching their `.html()` / string-replace usage in `neovantage-core-admin.js`), and HTML-bearing strings (`classic`, `default`, `register_first`) now go through `wp_kses_post()` like the existing `error_timeout` / `error_php_limits` entries. No string IDs or translations changed.
+- **Docs:** Documented the `neovantage_*` shortcode tag prefix as a frozen public-contract carve-out. The eight tags (`[neovantage_container]`, `[neovantage_row]`, `[neovantage_column]`, `[neovantage_title]`, `[neovantage_gap]`, `[neovantage_hr]`, `[neovantage_button]`, `[neovantage_content_box]`) predate the plugin's later `nc_` naming convention but are stored verbatim inside saved post content, so renaming any of them would silently strip blocks from existing posts and is treated as `Breaking`. New shortcodes added to this plugin must use the `nc_` prefix.
+- **Refactor:** Removed dead block-editor scaffolding from `Neovantage_Core_Public` — the long-commented `add_action( 'enqueue_block_editor_assets', ... )` and the orphan `public/js/neovantage-core-editor-blocks.js` (which used `blocks.getSaveElement` to wrap `core/table` in a `.table-responsive` div) have been deleted. The hook was never registered in any shipped version, so no live behaviour changes. If table-wrapping is wanted later, prefer a render-time filter (`render_block`) over a save-side block filter to avoid mutating persisted post content.
+- **Refactor:** Removed the orphan `NEOVANTAGE_PLUGIN_DIR` and `NEOVANTAGE_PLUGIN_URL` constants from `neovantage-core.php` — they duplicated the `NC_DIR_PATH` / `NC_DIR_URL` pair and grep across both the theme and the plugin found zero consumers.
+- **Refactor:** Removed dead `$post_date` block in `Neovantage_Core_Widget_Recent_Posts::widget()` — the variable was computed via a relative-time formatter but never displayed. Removal also retires a latent `current_time( 'timestamp' )` deprecation notice (deprecated since WP 5.3).
 
 ### 2.0.10 — 20 April, 2026
 

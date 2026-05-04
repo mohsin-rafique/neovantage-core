@@ -1,0 +1,57 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "neovantage-blocks/button",
+	"version": "1.0.0",
+	"title": "NEOVANTAGE Button",
+	"category": "design",
+	"icon": "button",
+	"description": "Bootstrap-style call-to-action button. Block-editor equivalent of the [neovantage_button] shortcode.",
+	"keywords": [ "button", "cta", "neovantage", "bootstrap" ],
+	"textdomain": "neovantage-core",
+	"attributes": {
+		"btn_title": {
+			"type": "string",
+			"default": "Button Title"
+		},
+		"btn_url": {
+			"type": "string",
+			"default": ""
+		},
+		"btn_target": {
+			"type": "string",
+			"default": "",
+			"enum": [ "", "_blank", "_self", "_parent", "_top" ]
+		},
+		"btn_align": {
+			"type": "string",
+			"default": "left",
+			"enum": [ "left", "center", "right" ]
+		},
+		"btn_size": {
+			"type": "string",
+			"default": "",
+			"enum": [ "", "xs", "sm", "lg" ]
+		},
+		"btn_full_width": {
+			"type": "boolean",
+			"default": false
+		},
+		"btn_style": {
+			"type": "string",
+			"default": "default",
+			"enum": [ "default", "primary", "success", "info", "warning", "danger", "link" ]
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"customClassName": true,
+		"spacing": {
+			"margin": true
+		},
+		"interactivity": false
+	},
+	"editorScript": "file:./editor.js",
+	"editorStyle": "file:./editor.css"
+}

@@ -252,7 +252,7 @@ if ( ! function_exists( 'nc_custom_contact_info' ) ) :
 	 * @param array $fields  Array of default contact fields.
 	 * @return array $fields Amended array of contact fields.
 	 */
-	function neovantage_custom_contact_info( $fields ) {
+	function nc_custom_contact_info( $fields ) {
 
 		// Remove legacy contact fields no longer used.
 		unset( $fields['aim'] );
@@ -262,8 +262,8 @@ if ( ! function_exists( 'nc_custom_contact_info' ) ) :
 		unset( $fields['author_gplus'] );
 
 		// Add theme-specific author page contact fields.
-		$fields['author_email']    = esc_html__( 'Email (Author Page)', 'neovantage' );
-		$fields['author_dribbble'] = esc_html__( 'Dribbble (Author Page)', 'neovantage' );
+		$fields['author_email']    = esc_html__( 'Email (Author Page)', 'neovantage-core' );
+		$fields['author_dribbble'] = esc_html__( 'Dribbble (Author Page)', 'neovantage-core' );
 
 		// Return the amended contact fields.
 		return $fields;

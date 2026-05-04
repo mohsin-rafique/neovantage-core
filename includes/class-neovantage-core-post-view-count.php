@@ -59,7 +59,14 @@ class Neovantage_Core_Post_View_Count {
 	}
 
 	/**
-	 * Count post view on single post page
+	 * Count post view on single post page.
+	 *
+	 * Skips the increment for logged-in administrators — `manage_options` is the
+	 * canonical "admin" capability (Administrator role on single-site, Super
+	 * Admin on multisite). Self-views from the team that runs the site shouldn't
+	 * inflate the public counter. The check is filterable via
+	 * `neovantage_skip_post_view_count` so editors/authors can be excluded too if
+	 * a site wants stricter behaviour.
 	 *
 	 * @since 1.0.6
 	 * @access public
@@ -82,6 +89,23 @@ class Neovantage_Core_Post_View_Count {
 		if ( ( is_single() && 'post' === get_post_type() ) || is_page() ) {
 
 			if ( ! $post->ID ) {
+				return;
+			}
+
+			/**
+			 * Filters whether the current request should be counted as a view.
+			 *
+			 * Default: skip when the current user can `manage_options` (admin).
+			 * Return `true` to skip, `false` to count.
+			 *
+			 * @since 2.1.0
+			 *
+			 * @param bool    $skip Whether to skip incrementing for this request.
+			 * @param WP_Post $post The post being viewed.
+			 */
+			$skip = (bool) apply_filters( 'neovantage_skip_post_view_count', current_user_can( 'manage_options' ), $post );
+
+			if ( $skip ) {
 				return;
 			}
 

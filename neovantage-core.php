@@ -15,7 +15,7 @@
  * Plugin Name:       NEOVANTAGE Core
  * Plugin URI:        https://github.com/mohsin-rafique/neovantage-core
  * Description:       The official companion plugin for the NEOVANTAGE WordPress theme. Adds post view counts, enhanced widgets, one-click demo import, and customizer export/import.
- * Version:           2.0.10
+ * Version:           2.1.0
  * Author:            PixelsPress, Mohsin Rafique
  * Author URI:        https://pixelspress.com
  * License:           GPL-2.0+
@@ -30,9 +30,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 define( 'NC_NAME', 'NEOVANTAGE Core' );
-if ( ! defined( 'NC_VERSION' ) ) {
-	define( 'NC_VERSION', '2.0.9' );
-}
+define( 'NC_VERSION', '2.1.0' );
 define( 'NC_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'NC_DIR_URL', plugin_dir_url( __FILE__ ) );
 
@@ -59,9 +57,6 @@ function deactivate_neovantage_core() {
 
 register_activation_hook( __FILE__, 'activate_neovantage_core' );
 register_deactivation_hook( __FILE__, 'deactivate_neovantage_core' );
-
-define( 'NEOVANTAGE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'NEOVANTAGE_PLUGIN_URL', untrailingslashit( plugins_url( basename( plugin_dir_path( __FILE__ ) ), basename( __FILE__ ) ) ) );
 
 /**
  * The core plugin class that is used to define internationalization,

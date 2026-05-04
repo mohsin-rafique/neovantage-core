@@ -1,0 +1,37 @@
+/**
+ * NEOVANTAGE Button — block editor styles.
+ *
+ * Front-end styling comes from the NEOVANTAGE theme's Bootstrap CSS. These
+ * rules only smooth out the editor preview when ServerSideRender is loading
+ * or when the plugin is active under another theme that doesn't ship the
+ * .btn / .btn-* classes.
+ */
+
+.neovantage-button-block-editor {
+	min-height: 2.5em;
+}
+
+.neovantage-button-block-editor .components-server-side-render {
+	display: block;
+}
+
+.neovantage-button-block-editor .components-spinner {
+	margin: 0.5em 0;
+}
+
+/* Minimal fallback so the preview is recognizable as a button when no theme styles load in the editor iframe. */
+.neovantage-button-block-editor .btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}

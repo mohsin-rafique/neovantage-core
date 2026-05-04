@@ -195,28 +195,28 @@ class Neovantage_Core_Admin {
 	 */
 	private function nc_get_admin_script_l10n_strings() {
 		return array(
-			'content'               => esc_attr__( 'Content', 'neovantage-core' ),
-			'modify'                => esc_attr__( 'Modify', 'neovantage-core' ),
-			'full_import'           => esc_attr__( 'Full Import', 'neovantage-core' ),
-			'partial_import'        => esc_attr__( 'Partial Import', 'neovantage-core' ),
-			'import'                => esc_attr__( 'Import', 'neovantage-core' ),
-			'download'              => esc_attr__( 'Download', 'neovantage-core' ),
-			'classic'               => __( 'Importing demo content will give you slider, pages, posts, theme options, widgets, sidebars and other settings. This will replicate the live demo. <strong>Clicking this option will replace your current theme options and widgets.</strong> It can also take a minute to complete.<br /><br />REQUIREMENTS:<br /><br />• Memory Limit of 256 MB and max execution time (php time limit) of 300 seconds.<br /><br />• NEO Bootstrap Carousel must be activated for slider to import.<br /><br />• NEOVANTAGE Core must be activated for NEOVANTAGE extended features to be imported.<br /><br />• Contact Form 7 plugin must be activated for the form to import.', 'neovantage-core' ),
-			'default'               => __( 'Importing demo content will give you slider, pages, posts, theme options, widgets, sidebars and other settings. This will replicate the live demo. <strong>Clicking this option will replace your current theme options and widgets.</strong> It can also take a minute to complete.<br /><br /> REQUIREMENTS:<br /><br />• Memory Limit of 128 MB and max execution time (php time limit) of 180 seconds.<br /><br />• NEO Bootstrap Carousel must be activated for slider to import.<br /><br />• Contact Form 7 plugin must be activated for the form to import.', 'neovantage-core' ),
+			'content'               => esc_html__( 'Content', 'neovantage-core' ),
+			'modify'                => esc_html__( 'Modify', 'neovantage-core' ),
+			'full_import'           => esc_html__( 'Full Import', 'neovantage-core' ),
+			'partial_import'        => esc_html__( 'Partial Import', 'neovantage-core' ),
+			'import'                => esc_html__( 'Import', 'neovantage-core' ),
+			'download'              => esc_html__( 'Download', 'neovantage-core' ),
+			'classic'               => wp_kses_post( __( 'Importing demo content will give you slider, pages, posts, theme options, widgets, sidebars and other settings. This will replicate the live demo. <strong>Clicking this option will replace your current theme options and widgets.</strong> It can also take a minute to complete.<br /><br />REQUIREMENTS:<br /><br />• Memory Limit of 256 MB and max execution time (php time limit) of 300 seconds.<br /><br />• NEO Bootstrap Carousel must be activated for slider to import.<br /><br />• NEOVANTAGE Core must be activated for NEOVANTAGE extended features to be imported.<br /><br />• Contact Form 7 plugin must be activated for the form to import.', 'neovantage-core' ) ),
+			'default'               => wp_kses_post( __( 'Importing demo content will give you slider, pages, posts, theme options, widgets, sidebars and other settings. This will replicate the live demo. <strong>Clicking this option will replace your current theme options and widgets.</strong> It can also take a minute to complete.<br /><br /> REQUIREMENTS:<br /><br />• Memory Limit of 128 MB and max execution time (php time limit) of 180 seconds.<br /><br />• NEO Bootstrap Carousel must be activated for slider to import.<br /><br />• Contact Form 7 plugin must be activated for the form to import.', 'neovantage-core' ) ),
 			/* translators: The current step label. */
-			'currently_processing'  => esc_attr__( 'Currently Processing: %s', 'neovantage-core' ),
+			'currently_processing'  => esc_html__( 'Currently Processing: %s', 'neovantage-core' ),
 			/* translators: The current step label. */
-			'currently_removing'    => esc_attr__( 'Currently Removing: %s', 'neovantage-core' ),
-			'file_does_not_exist'   => esc_attr__( 'The file does not exist', 'neovantage-core' ),
+			'currently_removing'    => esc_html__( 'Currently Removing: %s', 'neovantage-core' ),
+			'file_does_not_exist'   => esc_html__( 'The file does not exist', 'neovantage-core' ),
 			/* translators: URL. */
 			'error_timeout'         => wp_kses_post( sprintf( __( 'Demo server couldn\'t be reached. Please check for wp_remote_get on the <a href="%s" target="_blank">System Status</a> page.', 'neovantage-core' ), admin_url( 'admin.php?page=neovantage-system-status' ) ) ),
 			/* translators: URL. */
 			'error_php_limits'      => wp_kses_post( sprintf( __( 'Demo import failed. Please check for PHP limits in red on the <a href="%s" target="_blank">System Status</a> page. Change those to the recommended value and try again.', 'neovantage-core' ), admin_url( 'admin.php?page=neovantage-system-status' ) ) ),
-			'remove_demo'           => esc_attr__( 'Removing demo content will remove ALL previously imported demo content from this demo and restore your site to the previous state it was in before this demo content was imported.', 'neovantage-core' ),
+			'remove_demo'           => esc_html__( 'Removing demo content will remove ALL previously imported demo content from this demo and restore your site to the previous state it was in before this demo content was imported.', 'neovantage-core' ),
 			/* translators: URL. */
-			'register_first'        => sprintf( __( 'This plugin can only be installed or updated, after you have successfully completed the NEOVANTAGE product registration on the <a href="%s" target="_blank">Product Registration</a> tab.', 'neovantage-core' ), admin_url( 'admin.php?page=neovantage-registration' ) ),
-			'plugin_install_failed' => __( 'Plugin install failed. Please try Again.', 'neovantage-core' ),
-			'plugin_active'         => __( 'Active', 'neovantage-core' ),
+			'register_first'        => wp_kses_post( sprintf( __( 'This plugin can only be installed or updated, after you have successfully completed the NEOVANTAGE product registration on the <a href="%s" target="_blank">Product Registration</a> tab.', 'neovantage-core' ), admin_url( 'admin.php?page=neovantage-registration' ) ) ),
+			'plugin_install_failed' => esc_html__( 'Plugin install failed. Please try Again.', 'neovantage-core' ),
+			'plugin_active'         => esc_html__( 'Active', 'neovantage-core' ),
 		);
 	}
 }

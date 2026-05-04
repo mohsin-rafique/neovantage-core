@@ -82,13 +82,6 @@ class Neovantage_Core_Public {
 		 * of the theme.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-neovantage-core-post-view-count.php';
-
-		/**
-		 * Load template function filter after theme setup.
-		 *
-		 * - Block Editor Assets
-		 */
-		// add_action( 'enqueue_block_editor_assets', array($this, 'neovantage_enqueue_block_editor_assets' ) );
 	}
 
 	/**
@@ -107,24 +100,5 @@ class Neovantage_Core_Public {
 	 */
 	public function enqueue_scripts() {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/neovantage-core-public.js', array( 'jquery' ), $this->version, true );
-	}
-
-	/**
-	 * Wrap table block in div.
-	 *
-	 * @param {object} element
-	 * @param {object} blockType
-	 * @param {object} attributes
-	 *
-	 * @return The element.
-	 */
-
-	/**
-	 * Register the block.
-	 *
-	 * @since   2.0.0
-	 */
-	public function neovantage_enqueue_block_editor_assets() {
-		wp_enqueue_script( 'neovantage-gutenberg-block-editor-script', plugins_url( 'js/neovantage-core-editor-blocks.js', __FILE__ ), [ 'wp-blocks', 'wp-dom-ready', 'wp-element', 'wp-edit-post' ], '1.0.0', true );
 	}
 }
