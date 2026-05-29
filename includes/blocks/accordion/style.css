@@ -1,0 +1,100 @@
+/**
+ * NEOVANTAGE Accordion - shared styles (frontend + editor).
+ *
+ * Loaded via block.json "style" field so WordPress enqueues it on both the
+ * front-end and inside the block-editor canvas automatically.
+ */
+
+.wp-block-accordion {
+	margin-bottom: 1.5em;
+}
+
+.wp-block-accordion-item {
+	border: 1px solid #eee;
+	border-bottom: 0;
+	background: #fff;
+}
+
+.wp-block-accordion-item:first-child {
+	border-radius: 4px 4px 0 0;
+}
+
+.wp-block-accordion-item:last-child {
+	border-bottom: 1px solid #eee;
+	border-radius: 0 0 4px 4px;
+}
+
+.wp-block-accordion-item:only-child {
+	border-radius: 4px;
+	border-bottom: 1px solid #eee;
+}
+
+.wp-block-accordion-item__question {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 20px;
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.4;
+	color: #333;
+	cursor: pointer;
+	list-style: none;
+	transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.wp-block-accordion-item__question::-webkit-details-marker {
+	display: none;
+}
+
+.wp-block-accordion-item__question::marker {
+	content: '';
+}
+
+.wp-block-accordion-item__question::after {
+	content: '';
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	flex-shrink: 0;
+	margin-left: 16px;
+	border-right: 2px solid #999;
+	border-bottom: 2px solid #999;
+	transform: rotate(45deg);
+	transition: transform 0.25s ease;
+}
+
+.wp-block-accordion-item[open] > .wp-block-accordion-item__question::after {
+	transform: rotate(-135deg);
+}
+
+.wp-block-accordion-item__question:hover {
+	color: var(--wp--preset--color--theme, #26c6da);
+}
+
+.wp-block-accordion-item[open] > .wp-block-accordion-item__question {
+	border-bottom: 1px solid #eee;
+	color: var(--wp--preset--color--theme, #26c6da);
+}
+
+.wp-block-accordion-item__answer {
+	padding: 16px 20px;
+	font-size: 15px;
+	line-height: 1.6;
+	color: #555;
+}
+
+.wp-block-accordion-item__answer > *:last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-accordion-item__answer p {
+	margin-bottom: 0.75em;
+}
+
+.wp-block-accordion-item__answer ul,
+.wp-block-accordion-item__answer ol {
+	margin-bottom: 0.75em;
+	padding-left: 1.5em;
+}

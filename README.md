@@ -4,13 +4,13 @@
 
 **The official companion plugin for the [NEOVANTAGE WordPress theme](https://wordpress.org/themes/neovantage/).**
 
-[![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/mohsin-rafique/neovantage-core/releases)
+[![Version](https://img.shields.io/badge/version-2.2.0-blue.svg)](https://github.com/mohsin-rafique/neovantage-core/releases)
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![WordPress](https://img.shields.io/badge/WordPress-5.3%2B-21759b.svg)](https://wordpress.org/)
 [![PHP](https://img.shields.io/badge/PHP-8.0%2B-777bb3.svg)](https://www.php.net/)
-[![Tested up to](https://img.shields.io/badge/tested%20up%20to-WP%206.9-21759b.svg)](https://wordpress.org/)
+[![Tested up to](https://img.shields.io/badge/tested%20up%20to-WP%207.0-21759b.svg)](https://wordpress.org/)
 
-[Features](#-features) · [Why Choose It](#-why-choose-it) · [Installation](#-installation) · [Requirements](#-requirements) · [FAQ](#-faq) · [Changelog](#-changelog) · [Hire the Developer](#-hire-the-developer)
+[Features](#-features) | [Why Choose It](#-why-choose-it) | [Installation](#-installation) | [Requirements](#-requirements) | [FAQ](#-faq) | [Changelog](#-changelog) | [Hire the Developer](#-hire-the-developer)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 ## What Is NEOVANTAGE Core?
 
-NEOVANTAGE Core is the official companion plugin for the [NEOVANTAGE WordPress theme](https://wordpress.org/themes/neovantage/). It adds the features that belong in a plugin — post view tracking, enhanced widgets, a one-click demo importer, and Customizer export/import — keeping the theme itself lean, portable, and compliant with WordPress.org guidelines.
+NEOVANTAGE Core is the official companion plugin for the [NEOVANTAGE WordPress theme](https://wordpress.org/themes/neovantage/). It adds the features that belong in a plugin -- post view tracking, enhanced widgets, custom Gutenberg blocks, a one-click demo importer, and Customizer export/import -- keeping the theme itself lean, portable, and compliant with WordPress.org guidelines.
 
 > **This plugin is designed exclusively for the NEOVANTAGE theme.** It depends on theme functions and styling that are only present when NEOVANTAGE is active. It will not produce the expected output with any other theme.
 
@@ -28,13 +28,13 @@ NEOVANTAGE Core is the official companion plugin for the [NEOVANTAGE WordPress t
 
 ### 📊 Post View Counter
 
-Tracks and displays how many times each post has been viewed — automatically, without configuration. View counts are stored as standard WordPress post meta (`_neovantage_post_views_count`), so they survive theme switches, plugin deactivations, and database migrations.
+Tracks and displays how many times each post has been viewed -- automatically, without configuration. View counts are stored as standard WordPress post meta (`_neovantage_post_views_count`), so they survive theme switches, plugin deactivations, and database migrations.
 
 **No external service. No API key. No bloat.**
 
 ### 🗂️ Enhanced Recent Posts Widget
 
-A drop-in upgrade to WordPress's built-in Recent Posts widget. Shows post thumbnails, publication dates, and theme-matched styling — add it to any sidebar or footer column from **Appearance → Widgets**.
+A drop-in upgrade to WordPress's built-in Recent Posts widget. Shows post thumbnails, publication dates, and theme-matched styling -- add it to any sidebar or footer column from **Appearance -> Widgets**.
 
 ### 👤 Author Profile Contact Fields
 
@@ -46,7 +46,22 @@ A single-screen admin panel listing your PHP version, WordPress version, server 
 
 ### 📥 One-Click Demo Importer
 
-Imports the full NEOVANTAGE demo — posts, pages, menus, widgets, and all Customizer settings — in a single click. Go from a blank WordPress install to a fully configured demo site in under a minute.
+Imports the full NEOVANTAGE demo -- posts, pages, menus, widgets, and all Customizer settings -- in a single click. Go from a blank WordPress install to a fully configured demo site in under a minute.
+
+### Accordion Block with FAQ Schema
+
+A parent/child Gutenberg block (`neovantage-blocks/accordion` + `neovantage-blocks/accordion-item`) for FAQ-style collapsible content. Built on semantic `<details>/<summary>` HTML -- accessible by default, keyboard-navigable, and functional without JavaScript.
+
+**Key features:**
+
+- **FAQ structured data** -- optional JSON-LD `FAQPage` schema output (disabled by default, per-block toggle). Helps search engines display rich FAQ snippets directly in results.
+- **Collapse others** -- groups accordion items so only one can be open at a time (uses the HTML `name` attribute on `<details>` elements).
+- **Build-free** -- vanilla JS editor scripts using `window.wp.*` globals. No webpack, no JSX, no build step required.
+- **Theme-integrated** -- styled to match the NEOVANTAGE design system with theme color support via CSS custom properties.
+
+### Author Structured Data (JSON-LD)
+
+Outputs professional `ProfilePage` + `Person` schema.org structured data on author archive pages -- the format Google recommends for author/profile URLs. Includes author name, avatar, bio, social profile links (`sameAs`), published post count (`interactionStatistic`), registration date, and site context (`isPartOf`). Handles both full URLs and plain usernames in social profile fields. Auto-disabled when Yoast, Rank Math, SEOPress, or AIOSEO is active so it never conflicts with a dedicated SEO plugin.
 
 ### 💾 Customizer Export / Import
 
@@ -58,15 +73,15 @@ Export your entire WordPress Customizer configuration to a `.json` file. Import 
 
 | | NEOVANTAGE Core | Generic alternatives |
 |---|---|---|
-| **Setup time** | Zero — active on plugin activation | Each feature needs a separate plugin |
-| **Theme integration** | Pixel-perfect — built for NEOVANTAGE's layout and CSS | Styling gaps require custom CSS overrides |
-| **Post view storage** | Standard WP post meta — fully portable | Some plugins use custom tables or external APIs |
+| **Setup time** | Zero -- active on plugin activation | Each feature needs a separate plugin |
+| **Theme integration** | Pixel-perfect -- built for NEOVANTAGE's layout and CSS | Styling gaps require custom CSS overrides |
+| **Post view storage** | Standard WP post meta -- fully portable | Some plugins use custom tables or external APIs |
 | **Customizer backup** | Native `.json` export/import built in | Requires a third-party migration plugin |
-| **Demo content** | One click — menus, widgets, and settings all applied | Manual import, then manual Customizer recreation |
-| **Update delivery** | Standard WP update system — no extra steps | N/A |
-| **PHP 8.4 support** | Tested clean on PHP 8.0 – 8.4 | Varies by plugin |
+| **Demo content** | One click -- menus, widgets, and settings all applied | Manual import, then manual Customizer recreation |
+| **Update delivery** | Standard WP update system -- no extra steps | N/A |
+| **PHP 8.4 support** | Tested clean on PHP 8.0 - 8.4 | Varies by plugin |
 | **Code footprint** | Loads only what the theme needs | General-purpose plugins load unused code on every page |
-| **Dependencies** | Zero — no APIs, no accounts, no SaaS | Some require API keys or remote services |
+| **Dependencies** | Zero -- no APIs, no accounts, no SaaS | Some require API keys or remote services |
 
 ---
 
@@ -74,33 +89,33 @@ Export your entire WordPress Customizer configuration to a `.json` file. Import 
 
 | Requirement | Minimum | Recommended |
 |-------------|---------|-------------|
-| WordPress | 5.3 | 6.9 |
+| WordPress | 5.3 | 7.0 |
 | PHP | 8.0 | 8.4 |
-| Theme | NEOVANTAGE (any version) | NEOVANTAGE 2.0.6+ |
+| Theme | NEOVANTAGE (any version) | NEOVANTAGE 2.0.13+ |
 
 ---
 
 ## 🚀 Installation
 
-### Option 1 — Via the NEOVANTAGE Theme (Recommended)
+### Option 1 -- Via the NEOVANTAGE Theme (Recommended)
 
 1. Install and activate the [NEOVANTAGE theme](https://wordpress.org/themes/neovantage/)
 2. A notice appears prompting you to install NEOVANTAGE Core
-3. Go to **Appearance → Install Plugins** (or **NEOVANTAGE → Install Plugins**)
+3. Go to **Appearance -> Install Plugins** (or **NEOVANTAGE -> Install Plugins**)
 4. Click **Install** next to NEOVANTAGE Core, then **Activate**
 
-### Option 2 — Manual Upload
+### Option 2 -- Manual Upload
 
 1. Download `neovantage-core.zip` from the [latest release](https://github.com/mohsin-rafique/neovantage-core/releases/latest)
-2. In your WordPress admin go to **Plugins → Add New → Upload Plugin**
+2. In your WordPress admin go to **Plugins -> Add New -> Upload Plugin**
 3. Choose the zip file and click **Install Now**
 4. Click **Activate Plugin**
 
-### Option 3 — FTP / File Manager
+### Option 3 -- FTP / File Manager
 
 1. Download and unzip `neovantage-core.zip`
 2. Upload the `neovantage-core/` folder to `/wp-content/plugins/`
-3. Go to **Plugins → Installed Plugins** and activate **NEOVANTAGE Core**
+3. Go to **Plugins -> Installed Plugins** and activate **NEOVANTAGE Core**
 
 ---
 
@@ -108,11 +123,11 @@ Export your entire WordPress Customizer configuration to a `.json` file. Import 
 
 Once installed, NEOVANTAGE Core integrates with WordPress's native update system. When a new release is published you will see the standard update notice in:
 
-- **Dashboard → Updates**
+- **Dashboard -> Updates**
 - The **Plugins** list row
 - The **Admin bar** badge
 
-No manual downloads required — update directly from your WordPress admin, exactly like any plugin hosted on WordPress.org.
+No manual downloads required -- update directly from your WordPress admin, exactly like any plugin hosted on WordPress.org.
 
 ---
 
@@ -130,15 +145,15 @@ $views = (int) get_post_meta( get_the_ID(), '_neovantage_post_views_count', true
 
 ### Demo Importer
 
-1. Go to **NEOVANTAGE → Demo Importer**
+1. Go to **NEOVANTAGE -> Demo Importer**
 2. Click **Import Demo**
-3. Wait for the import to complete — menus, widgets, and Customizer settings are all applied automatically
+3. Wait for the import to complete -- menus, widgets, and Customizer settings are all applied automatically
 
 > Run the demo importer on a fresh WordPress installation only. Always back up before importing on an existing site.
 
 ### Customizer Export / Import
 
-1. Go to **NEOVANTAGE → Customizer Export/Import**
+1. Go to **NEOVANTAGE -> Customizer Export/Import**
 2. Click **Export** to download your settings as a `.json` file
 3. On another site, upload that file using the **Import** button on the same page
 
@@ -165,49 +180,55 @@ Post in the [WordPress.org support forum](https://wordpress.org/support/theme/ne
 
 ## 📝 Changelog
 
-### 2.1.0 — 6 May, 2026
+### 2.2.0 -- 30 May, 2026
 
-Released alongside NEOVANTAGE theme 2.1.0 — the two packages ship the same day to capture the theme.json design-token surface and the companion plugin polish as one user-visible upgrade.
+- **Feature:** Added `neovantage-blocks/accordion` and `neovantage-blocks/accordion-item` Gutenberg blocks. Parent/child dynamic blocks using semantic `<details>/<summary>` HTML for native accessibility and keyboard support. Parent block provides a "Collapse others" toggle (uses the HTML `name` attribute to group items) and optional FAQ structured data output (JSON-LD `FAQPage` schema, disabled by default, per-block toggle). Build-free vanilla JS editor scripts following the existing `neovantage-blocks/button` pattern.
+- **Feature:** Added JSON-LD structured data for author archive pages (`Neovantage_Core_Structured_Data` class). Outputs `ProfilePage` schema with `Person` mainEntity including name, avatar (`ImageObject` 256x256), bio, `sameAs` social links (website, Facebook, X/Twitter, LinkedIn, Dribbble, Instagram, GitHub, YouTube), `interactionStatistic` (published post count via `WriteAction`), `dateCreated` (user registration), `dateModified` (latest post), and `isPartOf` (`WebSite`). Handles both full URLs and plain usernames in social profile fields. Auto-disabled when Yoast, Rank Math, SEOPress, or AIOSEO is active.
+- **Compat:** Tested up to WordPress 7.0.
 
-- **Improvement:** Post view counter now skips the increment when an administrator (`manage_options` capability) is logged in. Self-views from the team that runs the site no longer inflate the public counter. Behaviour is filterable via the new `neovantage_skip_post_view_count` hook (`bool $skip, WP_Post $post`); return `true` to skip a view, `false` to count. Sites that want broader exclusion (editors, authors, all logged-in users) can add a one-line callback. Existing counters are untouched — only future increments are affected.
-- **Feature:** Shipped the `neovantage-blocks/button` Gutenberg block — the block-editor counterpart of the `[neovantage_button]` shortcode. Build-free implementation (`block.json` + editor JS using `window.wp.*` globals, no JSX/Babel/webpack). Inspector grouped into Button (label/URL/target) and Appearance (style/size/alignment/full-width) panels. PHP `render_callback` delegates to the same renderer the shortcode uses, so block and shortcode emit identical HTML and stay in lockstep on future tweaks.
-- **Security:** Hardened `Neovantage_Core_Shortcode_Button::neovantage_button()` — link text and title attribute are now properly escaped (`esc_html` / `esc_attr`), every input is validated against an enum (or normalized through `FILTER_VALIDATE_BOOLEAN` for full-width), and `rel="noopener noreferrer"` is added automatically whenever `target="_blank"` to prevent reverse-tabnabbing. The default URL placeholder also changed from the non-standard `'#.'` to `'#'`. No visible change for any well-formed `[neovantage_button]` invocation.
-- **Fix:** Renamed `neovantage_custom_contact_info()` to `nc_custom_contact_info()` to match the `add_filter( 'user_contactmethods', ... )` callback name — resolves a fatal "callback not found" TypeError on REST `/wp/v2/users/me` updates and any path that triggers `wp_get_user_contact_methods()`. Also corrected the textdomain on the two contact-field labels from `neovantage` to `neovantage-core`.
-- **i18n:** Normalized escape levels in `Neovantage_Core_Admin::nc_get_admin_script_l10n_strings()` — plain-text JS labels now use `esc_html__()` (matching their `.html()` / string-replace usage in `neovantage-core-admin.js`), and HTML-bearing strings (`classic`, `default`, `register_first`) now go through `wp_kses_post()` like the existing `error_timeout` / `error_php_limits` entries. No string IDs or translations changed.
+### 2.1.0 -- 6 May, 2026
+
+Released alongside NEOVANTAGE theme 2.1.0 -- the two packages ship the same day to capture the theme.json design-token surface and the companion plugin polish as one user-visible upgrade.
+
+- **Improvement:** Post view counter now skips the increment when an administrator (`manage_options` capability) is logged in. Self-views from the team that runs the site no longer inflate the public counter. Behaviour is filterable via the new `neovantage_skip_post_view_count` hook (`bool $skip, WP_Post $post`); return `true` to skip a view, `false` to count. Sites that want broader exclusion (editors, authors, all logged-in users) can add a one-line callback. Existing counters are untouched -- only future increments are affected.
+- **Feature:** Shipped the `neovantage-blocks/button` Gutenberg block -- the block-editor counterpart of the `[neovantage_button]` shortcode. Build-free implementation (`block.json` + editor JS using `window.wp.*` globals, no JSX/Babel/webpack). Inspector grouped into Button (label/URL/target) and Appearance (style/size/alignment/full-width) panels. PHP `render_callback` delegates to the same renderer the shortcode uses, so block and shortcode emit identical HTML and stay in lockstep on future tweaks.
+- **Security:** Hardened `Neovantage_Core_Shortcode_Button::neovantage_button()` -- link text and title attribute are now properly escaped (`esc_html` / `esc_attr`), every input is validated against an enum (or normalized through `FILTER_VALIDATE_BOOLEAN` for full-width), and `rel="noopener noreferrer"` is added automatically whenever `target="_blank"` to prevent reverse-tabnabbing. The default URL placeholder also changed from the non-standard `'#.'` to `'#'`. No visible change for any well-formed `[neovantage_button]` invocation.
+- **Fix:** Renamed `neovantage_custom_contact_info()` to `nc_custom_contact_info()` to match the `add_filter( 'user_contactmethods', ... )` callback name -- resolves a fatal "callback not found" TypeError on REST `/wp/v2/users/me` updates and any path that triggers `wp_get_user_contact_methods()`. Also corrected the textdomain on the two contact-field labels from `neovantage` to `neovantage-core`.
+- **i18n:** Normalized escape levels in `Neovantage_Core_Admin::nc_get_admin_script_l10n_strings()` -- plain-text JS labels now use `esc_html__()` (matching their `.html()` / string-replace usage in `neovantage-core-admin.js`), and HTML-bearing strings (`classic`, `default`, `register_first`) now go through `wp_kses_post()` like the existing `error_timeout` / `error_php_limits` entries. No string IDs or translations changed.
 - **Docs:** Documented the `neovantage_*` shortcode tag prefix as a frozen public-contract carve-out. The eight tags (`[neovantage_container]`, `[neovantage_row]`, `[neovantage_column]`, `[neovantage_title]`, `[neovantage_gap]`, `[neovantage_hr]`, `[neovantage_button]`, `[neovantage_content_box]`) predate the plugin's later `nc_` naming convention but are stored verbatim inside saved post content, so renaming any of them would silently strip blocks from existing posts and is treated as `Breaking`. New shortcodes added to this plugin must use the `nc_` prefix.
-- **Refactor:** Removed dead block-editor scaffolding from `Neovantage_Core_Public` — the long-commented `add_action( 'enqueue_block_editor_assets', ... )` and the orphan `public/js/neovantage-core-editor-blocks.js` (which used `blocks.getSaveElement` to wrap `core/table` in a `.table-responsive` div) have been deleted. The hook was never registered in any shipped version, so no live behaviour changes. If table-wrapping is wanted later, prefer a render-time filter (`render_block`) over a save-side block filter to avoid mutating persisted post content.
-- **Refactor:** Removed the orphan `NEOVANTAGE_PLUGIN_DIR` and `NEOVANTAGE_PLUGIN_URL` constants from `neovantage-core.php` — they duplicated the `NC_DIR_PATH` / `NC_DIR_URL` pair and grep across both the theme and the plugin found zero consumers.
-- **Refactor:** Removed dead `$post_date` block in `Neovantage_Core_Widget_Recent_Posts::widget()` — the variable was computed via a relative-time formatter but never displayed. Removal also retires a latent `current_time( 'timestamp' )` deprecation notice (deprecated since WP 5.3).
+- **Refactor:** Removed dead block-editor scaffolding from `Neovantage_Core_Public` -- the long-commented `add_action( 'enqueue_block_editor_assets', ... )` and the orphan `public/js/neovantage-core-editor-blocks.js` (which used `blocks.getSaveElement` to wrap `core/table` in a `.table-responsive` div) have been deleted. The hook was never registered in any shipped version, so no live behaviour changes. If table-wrapping is wanted later, prefer a render-time filter (`render_block`) over a save-side block filter to avoid mutating persisted post content.
+- **Refactor:** Removed the orphan `NEOVANTAGE_PLUGIN_DIR` and `NEOVANTAGE_PLUGIN_URL` constants from `neovantage-core.php` -- they duplicated the `NC_DIR_PATH` / `NC_DIR_URL` pair and grep across both the theme and the plugin found zero consumers.
+- **Refactor:** Removed dead `$post_date` block in `Neovantage_Core_Widget_Recent_Posts::widget()` -- the variable was computed via a relative-time formatter but never displayed. Removal also retires a latent `current_time( 'timestamp' )` deprecation notice (deprecated since WP 5.3).
 
-### 2.0.10 — 20 April, 2026
+### 2.0.10 -- 20 April, 2026
 
-- **Fix:** Updated `plugins-data.json` — `version` and `latest_version` for NEOVANTAGE Core bumped from `2.0.8` to `2.0.9` so the NEOVANTAGE theme's Install Plugins screen displays the correct version.
+- **Fix:** Updated `plugins-data.json` -- `version` and `latest_version` for NEOVANTAGE Core bumped from `2.0.8` to `2.0.9` so the NEOVANTAGE theme's Install Plugins screen displays the correct version.
 
-### 2.0.9 — 11 April, 2026
+### 2.0.9 -- 11 April, 2026
 
-- **Fix:** Admin header "Installed" version now reads from the NEOVANTAGE theme directory (`style.css` via `wp_get_theme()`) instead of the plugin's own `NC_VERSION` constant — the displayed version correctly reflects the installed theme version.
+- **Fix:** Admin header "Installed" version now reads from the NEOVANTAGE theme directory (`style.css` via `wp_get_theme()`) instead of the plugin's own `NC_VERSION` constant -- the displayed version correctly reflects the installed theme version.
 
-### 2.0.8 — 07 April, 2026
+### 2.0.8 -- 07 April, 2026
 
-- **Fix:** Plugin now boots on `plugins_loaded` hook instead of directly at file load — resolves `_load_textdomain_just_in_time` notice introduced in WordPress 6.7.
+- **Fix:** Plugin now boots on `plugins_loaded` hook instead of directly at file load -- resolves `_load_textdomain_just_in_time` notice introduced in WordPress 6.7.
 
-### 2.0.7 — 07 April, 2026
+### 2.0.7 -- 07 April, 2026
 
-- **Fix:** Corrected `GITHUB_OWNER` constant from `PixelsPress` to `mohsin-rafique` — wrong owner caused the GitHub Releases API to return 404, silently blocking all update notifications in Dashboard → Updates, Plugins list, and admin bar.
+- **Fix:** Corrected `GITHUB_OWNER` constant from `PixelsPress` to `mohsin-rafique` -- wrong owner caused the GitHub Releases API to return 404, silently blocking all update notifications in Dashboard -> Updates, Plugins list, and admin bar.
 - **Fix:** Updated plugin `url` and `homepage` in the updater to the correct GitHub repo (`github.com/mohsin-rafique/neovantage-core`).
 - **Fix:** Updated doc block API URL reference from `PixelsPress/neovantage-core` to `mohsin-rafique/neovantage-core`.
 - **Distribution:** Plugin source code and releases moved to GitHub (`github.com/mohsin-rafique/neovantage-core`). Download URL updated from `downloads.pixelspress.com` to GitHub Releases.
 - **Distribution:** Plugin version metadata JSON (`plugins-data.json`) moved from `downloads.pixelspress.com` to GitHub raw content.
 - **Improvement:** Plugin URI in plugin header updated to point to GitHub repo instead of `pixelspress.com`.
 - **Improvement:** Plugin description updated to accurately reflect all features.
-- **Improvement:** `plugins-data.json` added to repo root — single source of truth for version metadata used by the NEOVANTAGE theme's TGM plugin list.
+- **Improvement:** `plugins-data.json` added to repo root -- single source of truth for version metadata used by the NEOVANTAGE theme's TGM plugin list.
 - **Bump:** Version raised to 2.0.7 in plugin header and `NC_VERSION` constants.
 
-### 2.0.6 — 05 April, 2026
+### 2.0.6 -- 05 April, 2026
 
 - **Compatibility:** Tested up to WordPress 6.9.
 - **Compatibility:** Minimum PHP raised to 8.0; confirmed clean on PHP 8.4.
-- **Improvement:** Plugin now self-manages update notices via built-in updater — badges appear in Dashboard → Updates, Plugins list, and admin bar.
+- **Improvement:** Plugin now self-manages update notices via built-in updater -- badges appear in Dashboard -> Updates, Plugins list, and admin bar.
 - **Fix:** Removed deprecated `mysql_get_server_info()` fallback (removed in PHP 7).
 - **Fix:** Updated PHP version threshold in System Status from 7.2 to 8.0.
 - **Fix:** Replaced hardcoded version string in admin header with live WordPress.org API lookup (cached 12 hours).
@@ -215,27 +236,27 @@ Released alongside NEOVANTAGE theme 2.1.0 — the two packages ship the same day
 - **Fix:** Removed defunct Google+ author contact field (service shut down 2019).
 - **Fix:** Updated all `http://` links in System Status to `https://`.
 
-### 2.0.0 — 04 September, 2019
+### 2.0.0 -- 04 September, 2019
 
 - **Compatibility:** Full Gutenberg block editor compatibility.
 
-### 1.0.8 — June, 2018
+### 1.0.8 -- June, 2018
 
 - **Fix:** Strip extra paragraph and break tags from shortcode output.
 
-### 1.0.6 — 07 May, 2018
+### 1.0.6 -- 07 May, 2018
 
 - **Feature:** Post view count tracking and display.
 
-### 1.0.5 — 22 February, 2018
+### 1.0.5 -- 22 February, 2018
 
 - **Feature:** Additional author profile fields.
 
-### 1.0.4 — 11 November, 2017
+### 1.0.4 -- 11 November, 2017
 
 - **Fix:** Nonce verification for post format meta boxes.
 
-### 1.0.0 — 28 August, 2016
+### 1.0.0 -- 28 August, 2016
 
 - Initial release.
 
@@ -257,7 +278,7 @@ Contributions are welcome. Please open an issue first to discuss what you would 
 
 NEOVANTAGE Core and the NEOVANTAGE theme are built by **Mohsin Rafique**, a WordPress developer and open-source contributor operating as **PixelsPress**.
 
-If this plugin demonstrates the kind of work you are looking for — clean PHP, security-first coding, WordPress best-practice architecture — Mohsin is available for hire.
+If this plugin demonstrates the kind of work you are looking for -- clean PHP, security-first coding, WordPress best-practice architecture -- Mohsin is available for hire.
 
 **What he builds:**
 - Custom WordPress themes and companion plugins
@@ -276,13 +297,13 @@ If this plugin demonstrates the kind of work you are looking for — clean PHP, 
 
 - **WordPress.org forum:** [wordpress.org/support/theme/neovantage](https://wordpress.org/support/theme/neovantage/)
 - **GitHub issues:** [github.com/mohsin-rafique/neovantage-core/issues](https://github.com/mohsin-rafique/neovantage-core/issues)
-- **Documentation:** [pixelspress.com/documentation](https://pixelspress.com/documentation)
+- **Documentation:** [pixelspress.com/article-categories/neovantage/](https://pixelspress.com/article-categories/neovantage/)
 
 ---
 
 ## 📄 License
 
-NEOVANTAGE Core — Copyright (C) 2016–2026 [PixelsPress](https://pixelspress.com)
+NEOVANTAGE Core -- Copyright (C) 2016-2026 [PixelsPress](https://pixelspress.com)
 
 Licensed under the [GNU General Public License v2.0 or later](https://www.gnu.org/licenses/gpl-2.0.html).
 
@@ -292,6 +313,6 @@ This program is free software: you can redistribute it and/or modify it under th
 
 <div align="center">
 
-Made with ❤️ by [PixelsPress](https://pixelspress.com) · [mohsin-rafique](https://github.com/mohsin-rafique)
+Made with ❤️ by [PixelsPress](https://pixelspress.com) | [mohsin-rafique](https://github.com/mohsin-rafique)
 
 </div>

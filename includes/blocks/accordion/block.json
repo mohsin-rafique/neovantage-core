@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "neovantage-blocks/accordion",
+	"version": "1.0.0",
+	"title": "NEOVANTAGE Accordion",
+	"category": "design",
+	"icon": "list-view",
+	"description": "Collapsible accordion for FAQs, feature lists, or any grouped content. Optionally outputs FAQ structured data (JSON-LD) for search engines.",
+	"keywords": [ "accordion", "faq", "collapse", "toggle", "neovantage" ],
+	"textdomain": "neovantage-core",
+	"attributes": {
+		"enableSchema": {
+			"type": "boolean",
+			"default": false
+		},
+		"collapseOthers": {
+			"type": "boolean",
+			"default": true
+		},
+		"accordionId": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"providesContext": {
+		"neovantage-blocks/accordionId": "accordionId",
+		"neovantage-blocks/collapseOthers": "collapseOthers"
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"customClassName": true,
+		"spacing": {
+			"margin": true
+		},
+		"interactivity": false
+	},
+	"editorScript": "file:./editor.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css"
+}

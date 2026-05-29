@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "neovantage-blocks/accordion-item",
+	"version": "1.0.0",
+	"title": "Accordion Item",
+	"category": "design",
+	"icon": "arrow-down-alt2",
+	"description": "A single collapsible item inside an accordion block.",
+	"keywords": [ "accordion", "item", "faq", "question" ],
+	"textdomain": "neovantage-core",
+	"parent": [ "neovantage-blocks/accordion" ],
+	"usesContext": [
+		"neovantage-blocks/accordionId",
+		"neovantage-blocks/collapseOthers"
+	],
+	"attributes": {
+		"question": {
+			"type": "string",
+			"default": ""
+		},
+		"openByDefault": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"customClassName": true,
+		"reusable": false,
+		"interactivity": false
+	},
+	"editorScript": "file:./editor.js",
+	"editorStyle": "file:./editor.css"
+}

@@ -90,6 +90,11 @@ class Neovantage_Core_Shortcode {
 		require_once plugin_dir_path( __FILE__ ) . 'shortcodes/class-neovantage-core-shortcode-content-box.php';
 
 		/**
+		 * The class responsible for the Accordion block (no shortcode equivalent).
+		 */
+		require_once plugin_dir_path( __FILE__ ) . 'shortcodes/class-neovantage-core-shortcode-accordion.php';
+
+		/**
 		 * Remove Empty Paragraph Tags from Shortcodes
 		 */
 		// add_filter( 'the_content', array ( $this, 'neovantage_shortcode_empty_paragraph_fix' ) );

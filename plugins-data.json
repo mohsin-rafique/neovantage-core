@@ -2,8 +2,8 @@
     {
         "name": "NEOVANTAGE Core",
         "slug": "neovantage-core",
-        "version": "2.1.0",
-        "latest_version": "2.1.0",
+        "version": "2.2.0",
+        "latest_version": "2.2.0",
         "has_package": true,
         "premium": false,
         "required": false,
@@ -33,6 +33,15 @@
         "slug": "instagram-feed",
         "version": "6.0",
         "latest_version": "6.0",
+        "has_package": false,
+        "premium": false,
+        "required": false
+    },
+    {
+        "name": "AMP WP",
+        "slug": "amp-wp",
+        "version": "1.7.11",
+        "latest_version": "1.7.11",
         "has_package": false,
         "premium": false,
         "required": false

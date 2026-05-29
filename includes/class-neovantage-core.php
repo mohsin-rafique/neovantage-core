@@ -135,12 +135,16 @@ class Neovantage_Core {
 		require_once NC_DIR_PATH . 'includes/functions/neovantage-core-functions.php';
 
 		/**
-		 * Self-update manager — injects this plugin into WordPress's native
-		 * update system so users see update notices in Dashboard → Updates,
-		 * the Plugins list, and the admin bar badge.
+		 * Self-update manager.
 		 */
 		require_once NC_DIR_PATH . 'includes/class-neovantage-core-updater.php';
 		( new Neovantage_Core_Updater() )->register();
+
+		/**
+		 * JSON-LD structured data output.
+		 */
+		require_once NC_DIR_PATH . 'includes/class-neovantage-core-structured-data.php';
+		( new Neovantage_Core_Structured_Data() )->register();
 	}
 
 	/**
